@@ -1,0 +1,43 @@
+.main-content{
+    display: flex;
+    justify-content: center;
+}
+
+.type-bar{
+    border: 2px solid rgb(131, 152, 167);
+    border-radius: 5px;
+    width: 400px;
+    padding: 10px 0 10px 30px;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid rgb(98, 158, 255);
+}
+
+#visualize-slider:focus{
+    border: 1px solid;
+    border-right-width: 0;
+    border-left-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.money-sign{
+    background-color: lightgray;
+    padding: 17px;
+}
+
+.fatter-height{
+    padding: 11px 8px;
+}
+
+.slide-container{
+    width:400px;
+    padding: 10px;
+    margin: 5px auto;
+}
+
+#myRange{
+    width: 277.7px;
+}
