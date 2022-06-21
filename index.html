@@ -172,8 +172,10 @@
 
             </div>
             <script>
+
                 document.getElementById("myRange").value = 20;
                 document.getElementById("visualize-slider").value = 20;
+
                 function setPrices() {
                     var value = document.getElementById("price").value;                         //Value is the money that the meal cost
                     var tip = document.getElementById("myRange").value * .01;                   //tip is the percent tip that I want to spend
@@ -200,9 +202,11 @@
                 costInput.addEventListener('input', setPrices);
                 sliderInput.addEventListener('input', function(){
                     document.getElementById("visualize-slider").value = document.getElementById("myRange").value;
+                    setPrices();
                 });
                 visualInput.addEventListener('input', function(){
                     document.getElementById("myRange").value = document.getElementById("visualize-slider").value;
+                    setPrices();
                 });
 
 
