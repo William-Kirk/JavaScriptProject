@@ -1,146 +1,210 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="./resources/dist/output.css" type="text/css" rel="stylesheet" />
-    <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
 
-    <title>an interesting title</title>
-  </head>
-  <body>
-    <header>
-      <!-- This example requires Tailwind CSS v2.0+ -->
-      <nav class="bg-white shadow">
-        <div class="mx-auto px-2 sm:px-6 lg:px-8"> <!--figure out a way to set the minimum width to something that makes sense-->
-          <div class="relative flex justify-between h-16">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              <!-- Mobile menu button -->
-              <button
-                type="button"
-                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Open main menu</span>
-                <!--
+<head>
+  <link href="./resources/dist/output.css" type="text/css" rel="stylesheet" />
+  <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+
+  <title>an interesting title</title>
+</head>
+
+<body>
+  <header>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <nav class="bg-white shadow">
+      <div class="mx-auto px-2 sm:px-6 lg:px-8">
+        <!--figure out a way to set the minimum width to something that makes sense-->
+        <div class="relative flex justify-between h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button -->
+            <button type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <!--
                         Icon when menu is closed.
             
                         Heroicon name: outline/menu
             
                         Menu open: "hidden", Menu closed: "block"
                         -->
-                <svg
-                  class="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-                <!--
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <!--
                         Icon when menu is open.
             
                         Heroicon name: outline/x
             
                         Menu open: "block", Menu closed: "hidden"
                         -->
-                <svg
-                  class="hidden h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex-shrink-0 flex items-center">
+              <h1 class="text-2xl font-bold text-gray-700">
+                William's Project
+              </h1>
+            </div>
+          </div>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+              <a href="./index.html"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Tip Calculator
+              </a>
+              <a href="./grocery.html"
+                class="border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Grocery List
+              </a>
+              <a href="./game.html"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Rock, Paper, Scissors
+              </a>
+              <a href="./weather.html"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Weather Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="pt-2 pb-4 space-y-1">
+          <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+          <a href="./index.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Tip
+            Calculator</a>
+          <a href="./grocery.html"
+            class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Grocery
+            List</a>
+          <a href="./game.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Rock,
+            Paper, Scissors</a>
+          <a href="./weather.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Weather
+            Dashboard</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <main style="margin:0 30px;">
+      <div>
+        <h1 style="margin-top:50px;font-size: x-large; text-align: center;">Grocery List</h1>
+      </div>
+      <div class="flex justify-center">
+        <div style="width: 600px;">
+          <label for="email" class="block text-sm font-medium text-gray-700">Grocery Items</label>
+          <div class="mt-1 flex rounded-md shadow-sm">
+            <div class="relative flex items-stretch flex-grow focus-within:z-10">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <!-- Heroicon name: solid/users -->
+                <img style="width:18px;height:18px;"src="https://cdn4.iconfinder.com/data/icons/flat-pro-business-set-1/32/shopping-bag-grey-512.png">
+              </div>
+              <input type="email" name="email" id="grocery-input"
+                class="focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300"
+                placeholder="Eggs!">
+            </div>
+            <button type="button" id="add-grocery"
+              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-gray-300 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+              <!-- Heroicon name: solid/sort-ascending -->
+              <span>Add Item</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div>
+        <ul id="list-of-grocery" style="margin-top: 20px;">
+          <!-- <li>
+            <div class="grocery-item">
+              <span class="grocery-item-text">
+                lol
+              </span>
+              <button class="grocery-item-button-l">
+                <img src="./resources/Images/images-removebg-preview.png" style="width:16px; height:16px;">
+              </button>
+              <button class="grocery-item-button-r">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/48-checkmark-cross/cross.png" style="width:16px; height:16px;">
               </button>
             </div>
-            <div
-              class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
-            >
-              <div class="flex-shrink-0 flex items-center">
-                <h1 class="text-2xl font-bold text-gray-700">
-                  William's Super Cool Projects lol
-                </h1>
-              </div>
-            </div>
-            <div
-              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-            >
-              <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                <a
-                  href="./index.html"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Tip Calculator
-                </a>
-                <a
-                  href="./grocery.html"
-                  class="border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Grocery List
-                </a>
-                <a
-                  href="./game.html"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Rock, Paper, Scissors
-                </a>
-                <a
-                  href="./weather.html"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Weather Dashboard
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+          </li> -->
 
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="pt-2 pb-4 space-y-1">
-            <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-            <a
-              href="./index.html"
-              class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Tip Calculator</a
-            >
-            <a
-              href="./grocery.html"
-              class="border-transparent text-gray-900 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Grocery List</a
-            >
-            <a
-              href="./game.html"
-              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Rock, Paper, Scissors</a
-            >
-            <a
-              href="./weather.html"
-              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Weather Dashboard</a
-            >
-          </div>
-        </div>
-      </nav>
-    </header>
-    <div>
+          
+        </ul>
+      </div>
+    </main>
+  </div>
+  <script>
 
-    </div>
-  </body>
-  <footer></footer>
+    let groceryList = [];
+    var number = 0;
+
+    function addItemToGroceryList(){
+      var groceryName = document.getElementById('grocery-input').value;
+
+      if(groceryName){
+        groceryList.push({itemName:groceryName, checked:false});
+        number++;
+        console.log(groceryList);
+        
+        createListItem(groceryName, number);
+
+      }
+      else{ //TODO WRITE WARNING
+
+      }
+    }
+
+    function createListItem(itemText, index){
+        var firstDiv = document.createElement("div");
+        firstDiv.classList.add('grocery-item');
+        firstDiv.id = "index-" + index;
+
+        var firstSpan = document.createElement("span");
+        firstSpan.classList.add('grocery-item-text');
+        firstSpan.innerHTML = itemText;
+
+        var buttonLeft = document.createElement("button");
+        buttonLeft.classList.add('grocery-item-button-l');
+
+        var buttonRight = document.createElement("button");
+        buttonRight.classList.add('grocery-item-button-r');
+
+        var imageLeft = document.createElement("img");
+        imageLeft.setAttribute("src", "./resources/Images/images-removebg-preview.png");
+        imageLeft.style.width = "16px";
+        imageLeft.style.height = "16px";
+
+        var imageRight = document.createElement("img");
+        imageRight.setAttribute("src", "https://uxwing.com/wp-content/themes/uxwing/download/48-checkmark-cross/cross.png");
+        imageRight.style.width = "16px";
+        imageRight.style.height = "16px";
+
+        firstDiv.appendChild(firstSpan);
+        firstDiv.appendChild(buttonLeft);
+        firstDiv.appendChild(buttonRight);
+        buttonLeft.appendChild(imageLeft);
+        buttonRight.appendChild(imageRight);
+        
+        var unorderedList = document.getElementById('list-of-grocery');
+        unorderedList.appendChild(firstDiv);
+    }
+
+    var addItem = document.getElementById('add-grocery');
+    addItem.addEventListener("click", addItemToGroceryList);
+
+  </script>
+</body>
+<footer></footer>
+
 </html>
