@@ -113,3 +113,62 @@ input:focus{
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
     border: solid rgb(56, 162, 210) 1px;
 }
+
+.title-screen{
+    background-image:url('bricks.jpg');
+}
+
+.mini-text-box{
+    padding: 10px 10px;
+    width:240px;
+    height: 170px;
+    margin: 20px auto;
+}
+
+#start-game-button{
+    background-color: rgb(214, 232, 244);
+}
+
+#start-game-button:hover{
+    background-color: rgb(205, 220, 230);
+}
+
+.character-fighter{
+    border: 3px grey solid; border-radius: 20px; width:200px; height:200px; background-color: white;margin: 40px;
+}
+
+.character-fighter:hover{
+    border-color: rgb(110, 175, 255);
+    border-width: 5px;
+    border-radius: 15px;
+}
+
+.opponent-name{
+    background-color:white;
+    padding: 30px;
+    padding-left: 10px;
+    padding-right: 200px;
+    border: 3px black solid;
+    border-radius: 30px;
+}
+
+.attack-button{
+    padding: 8px;margin-left: auto;border: black 3px solid;
+    width: 200px;
+    height: 50px;
+    text-align:center;
+    font-weight: bold;
+    margin: 3px;
+    border-radius: 15px;
+    background-color: rgb(240, 250, 255);
+}
+
+.attack-button:hover{
+    background-color: rgb(162, 227, 234);
+    border-color: rgb(19, 44, 97);
+}
+
+.fight{
+    width:700px;
+    height:500px;
+}

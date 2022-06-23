@@ -1,146 +1,360 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="./resources/dist/output.css" type="text/css" rel="stylesheet" />
-    <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
 
-    <title>an interesting title</title>
-  </head>
-  <body>
-    <header>
-      <!-- This example requires Tailwind CSS v2.0+ -->
-      <nav class="bg-white shadow">
-        <div class="mx-auto px-2 sm:px-6 lg:px-8"> <!--figure out a way to set the minimum width to something that makes sense-->
-          <div class="relative flex justify-between h-16">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              <!-- Mobile menu button -->
-              <button
-                type="button"
-                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Open main menu</span>
-                <!--
+<head>
+  <link href="./resources/dist/output.css" type="text/css" rel="stylesheet" />
+  <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+
+  <title>an interesting title</title>
+</head>
+
+<body class="title-screen">
+  <header>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <nav class="bg-white shadow">
+      <div class="mx-auto px-2 sm:px-6 lg:px-8">
+        <!--figure out a way to set the minimum width to something that makes sense-->
+        <div class="relative flex justify-between h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button -->
+            <button type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <!--
                         Icon when menu is closed.
             
                         Heroicon name: outline/menu
             
                         Menu open: "hidden", Menu closed: "block"
                         -->
-                <svg
-                  class="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-                <!--
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <!--
                         Icon when menu is open.
             
                         Heroicon name: outline/x
             
                         Menu open: "block", Menu closed: "hidden"
                         -->
-                <svg
-                  class="hidden h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex-shrink-0 flex items-center">
+              <h1 class="text-2xl font-bold text-gray-700">
+                William's Project
+              </h1>
             </div>
-            <div
-              class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
-            >
-              <div class="flex-shrink-0 flex items-center">
-                <h1 class="text-2xl font-bold text-gray-700">
-                  William's Super Cool Projects lol
-                </h1>
-              </div>
-            </div>
-            <div
-              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-            >
-              <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                <a
-                  href="./index.html"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Tip Calculator
-                </a>
-                <a
-                  href="./grocery.html"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Grocery List
-                </a>
-                <a
-                  href="./game.html"
-                  class="border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Rock, Paper, Scissors
-                </a>
-                <a
-                  href="./weather.html"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Weather Dashboard
-                </a>
-              </div>
+          </div>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+              <a href="./index.html"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Tip Calculator
+              </a>
+              <a href="./grocery.html"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Grocery List
+              </a>
+              <a href="./game.html"
+                class="border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Rock, Paper, Scissors
+              </a>
+              <a href="./weather.html"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Weather Dashboard
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="pt-2 pb-4 space-y-1">
-            <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-            <a
-              href="./index.html"
-              class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Tip Calculator</a
-            >
-            <a
-              href="./grocery.html"
-              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Grocery List</a
-            >
-            <a
-              href="./game.html"
-              class="border-transparent text-gray-900 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Rock, Paper, Scissors</a
-            >
-            <a
-              href="./weather.html"
-              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >Weather Dashboard</a
-            >
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="pt-2 pb-4 space-y-1">
+          <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+          <a href="./index.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Tip
+            Calculator</a>
+          <a href="./grocery.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Grocery
+            List</a>
+          <a href="./game.html"
+            class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Rock,
+            Paper, Scissors</a>
+          <a href="./weather.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Weather
+            Dashboard</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="title-popup" style="margin: 50px;" class="flex justify-center">
+    <div
+      style="border-radius: 15px; border:solid rgb(138, 158, 171) 3px;background-size:400px;width:800px; height:500px;"
+      class="bg-white shadow sm:rounded-lg">
+      <div class="px-4 py-5 sm:p-6">
+        <hr style="margin-top:25px">
+        <!-- <img style="margin: 0 auto; width: 400px; height:100px;"src="./resources/Images/rckprsr.png"> -->
+        <h1
+          style="margin: 15px 160px; text-align: center; font-size: xx-large; font-weight: bold; color:rgb(56, 63, 67);"
+          class="">Rock Paper Scissors</h1>
+        <hr>
+        <div style="margin-top:8px;" class="flex justify-center">
+          <div style="margin: 0 10px;">
+            <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
+              <p>Oh no! Bad guys! They terrorize the town with their epic rock paper scissor skills! You're going to
+                need to beat them at their own game!</p>
+            </div>
+          </div>
+          <div style="margin: 0 8px;">
+            <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
+              <p>Heres the instructions on how to play, but I havent come up with those yet, so good luck!</p>
+            </div>
+          </div>
+          <div style="margin: 0 8px;">
+            <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
+              <p>Good luck defeating all eight of the master rock paper scissor fighters!</p>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <div>
+        <div style="margin-top: 50px;" class="mt-5 flex justify-center">
+          <button type="button" id="start-game-button" style="font-size: large; padding: 25px 50px;"
+            class="bg-gray-50 inline-flex items-center px-4 py-2 border font-medium rounded-md text-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
+            Start Game!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <div id="character-selector" style="margin-top: 50px auto; width: 1200px;" class="justify-center characters">
+      <button id="character-0" class="character-fighter">
+        <img style="display:block" src="./resources/images/gon.jpg">
+      </button>
+      <button id="character-1" class="character-fighter">
+        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+      </button>
+      <button id="character-2" class="character-fighter">
+        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+      </button>
+      <button id="character-3" class="character-fighter">
+        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+      </button>
+      <button id="character-4" class="character-fighter">
+        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+      </button>
+      <button id="character-5" class="character-fighter">
+        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+      </button>
+      <button id="character-6" class="character-fighter">
+        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+      </button>
+      <button id="character-7" class="character-fighter">
+        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+      </button>
 
     </div>
-  </body>
-  <footer></footer>
+  </div>
+  <div id="fight-space"; style="background-repeat:no-repeat;background-image:url('resources/Images/pokemon.png'); background-size: contain;"class="fight">
+    <div>
+      <div style="margin-bottom:145px;" class="flex">
+        <div id="enemy-info-space" class="opponent-name">
+          Enemy Name and Health
+        </div>
+      </div>
+      <div class="flex">
+        <div style="margin-left: auto;" class="opponent-name">
+          Your Health
+        </div>
+      </div>
+      <div style="padding: 15px 0;background-color: rgb(215, 244, 255);" class="bottom flex justify-end">
+        <div class="flex justify-between">
+          <div id="game-info"style="width:250px;font-weight: bold; padding: 30px;margin-left: 15px;border: black 3px solid;">
+            WHAT WILL YOU DO?
+          </div>
+        </div>
+        <div style="margin-left: auto;">
+          <div class="flex">
+            <button id="rock"class="attack-button">
+              Rock
+            </button>
+            <button id="scissors"class="attack-button">
+              Scissors
+            </button>
+          </div>
+          <div class="flex">
+            <button id="paper"class="attack-button">
+              Paper
+            </button>
+            <button id="forfeit"class="attack-button">
+              Forfeit
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script>
+    const fight = document.getElementById('fight-space');
+    const characterSelect = document.getElementById('character-selector');
+    const title = document.getElementById('title-popup');
+    characterSelect.style.display = 'none';
+    fight.style.display = 'none';
+    //x = rock, y = paper, z = scissors
+    var characterInfo = [{name:"name",x:100,y:0,z:0},{name:"name1",x:0,y:50,z:50}];
+    let currentCharacter = 0;
+
+    function startGame() {
+      title.style.display = 'none';
+      characterSelect.style.display = 'block';
+    }
+    function selectCharacter(){
+      if(event.target.id){
+        currentCharacter = event.target.id.substring(10);
+        console.log(currentCharacter);
+      }
+      else{
+        currentCharacter = event.target.parentNode.id.substring(10);
+        console.log(currentCharacter);
+      }
+      setupGame();
+    }
+    function findFighters(){
+      var fighterSelectButtons = document.getElementsByClassName("character-fighter");
+      var fighterSelectImages = document.getElementsByClassName("character-fighter");
+      var count = fighterSelectButtons.length;
+      for (let i = 0; i < count; i++) {
+        fighterSelectButtons[i].addEventListener("click",selectCharacter);
+      }
+      count = fighterSelectImages.length;
+      for (let i = 0; i < count; i++) {
+        fighterSelectImages[i].addEventListener("click",selectCharacter);
+      }
+    }
+    function findFightButtons(){
+      var fightButtons = document.getElementsByClassName("attack-button");
+      var count = fightButtons.length;
+      for(let i = 0; i< count; i++){
+        fightButtons[i].addEventListener("click",fightButtonClicked);
+        
+      }
+    }
+    function setupGame(){
+      characterSelect.style.display = 'none';
+      fight.style.display = 'block';
+      var enemyInfoSpace = document.getElementById('enemy-info-space');
+      enemyInfoSpace.innerHTML = characterInfo[currentCharacter].name;
+    }
+    function fightButtonClicked(){
+      var gameInfo = document.getElementById("game-info");
+      gameInfo.innerHTML="You Chose " + event.target.id.substring(0,1).toUpperCase() + event.target.id.substring(1);
+      console.log(event.target.id);
+      //x = rock, y = paper, z = scissors
+      var enemyChoice = makeEnemyChoice();
+      var playerChoice = event.target.id;
+      if(enemyChoice == "x")
+        enemyChoice = 'rock';
+      else if(enemyChoice == 'y')
+        enemyChoice = 'paper';
+      else
+        enemyChoice = 'scissors'
+
+      if(winner(playerChoice, enemyChoice)){
+        console.log('YOU WIN');
+        gameInfo.innerHTML="YOU WIN";
+      }
+      else{
+        console.log('YOU DIDNT WIN');
+        gameInfo.innerHTML="YOU LOSE"
+      }
+      
+    }
+    function makeEnemyChoice(){
+      //var random = Math.random() * 100; //Number between 0 and 99
+      //lets say we have a bias of choosing x 60% of the time
+      //lets say we have a bias of choosing z 30% of the time
+      var x = characterInfo[currentCharacter].x
+      var y = characterInfo[currentCharacter].y;
+      var z = characterInfo[currentCharacter].z
+      var nums = [];
+      var count = 0;
+      for(let i = 0; i < x; i++){
+        if(i != x)
+          nums.push('x')
+      }
+
+      for(let i = 0; i < y; i++){
+        if(i != y)
+          nums.push('y')
+      }
+
+      for(let i = 0; i < z; i++){
+        if(i != z)
+          nums.push('z')
+      }
+      while(nums.length < 100){
+        randomNum = Math.random();
+        if(randomNum < .33)
+          nums.push('x');
+        else{
+          if(randomNum < .66)
+            nums.push('y');
+          else
+            nums.push('z');
+        }
+      }
+
+
+      console.log(nums);
+
+      newNum = Math.random() * 100;
+      console.log(newNum);
+      return nums[newNum];
+
+
+    }
+    function winner(enemyChoice, playerChoice){
+      //true if player wins
+      
+      if(enemyChoice == "rock"){
+        if(playerChoice == "paper")
+          return true;
+        else
+          return false;
+      }
+      else if(enemyChoice == "paper"){
+        if(playerChoice == "scissors")
+          return true;
+        else
+          return false;
+      }
+      else{
+        if(playerChoice == "rock")
+          return true;
+        else
+          return false;
+      }
+    }
+
+    var startGameButton = document.getElementById("start-game-button");
+    startGameButton.addEventListener('click', startGame);
+    findFighters();
+    findFightButtons();
+    makeEnemyChoice();
+    
+
+  </script>
+</body>
+<footer></footer>
+
 </html>
