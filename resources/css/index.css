@@ -59,7 +59,7 @@ input:focus{
     --tw-bg-opacity: 1;
     background-color: rgb(249 250 251 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity));
+    color: rgb(80, 92, 95 / var(--tw-text-opacity));
 }
 
 .grocery-item-button-l{
@@ -86,4 +86,30 @@ input:focus{
     background-color: rgb(249 250 251 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.grocery-item-checked{
+    width: 507px;
+    padding: 8px;
+    border-top-left-radius: 0.375rem/* 6px */;
+    border-bottom-left-radius: 0.375rem/* 6px */;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(145, 239, 214);
+    --tw-text-opacity: 1;
+    color: rgb(80, 92, 95);
+}
+
+.grocery-item-button-l:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+    border: solid rgb(56, 162, 210) 1px;
+}
+
+.grocery-item-button-r:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+    border: solid rgb(56, 162, 210) 1px;
 }

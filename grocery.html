@@ -114,12 +114,14 @@
                 class="focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300"
                 placeholder="Eggs!">
             </div>
+            
             <button type="button" id="add-grocery"
               class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-gray-300 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
               <!-- Heroicon name: solid/sort-ascending -->
               <span>Add Item</span>
             </button>
           </div>
+          <label id="err-msg"style="color: red;"class="block text-sm font-medium"></label>
         </div>
 
       </div>
@@ -137,31 +139,29 @@
                 <img src="https://uxwing.com/wp-content/themes/uxwing/download/48-checkmark-cross/cross.png" style="width:16px; height:16px;">
               </button>
             </div>
+            <hr style="width:600px; position:relative;">
           </li> -->
 
-          
+
         </ul>
       </div>
     </main>
   </div>
   <script>
 
-    let groceryList = [];
     var number = 0;
+    const unorderedList = document.getElementById('list-of-grocery');
 
     function addItemToGroceryList(){
       var groceryName = document.getElementById('grocery-input').value;
-
+      document.getElementById('err-msg').innerText = null;
+      //err.innerText = null;
       if(groceryName){
-        groceryList.push({itemName:groceryName, checked:false});
         number++;
-        console.log(groceryList);
-        
         createListItem(groceryName, number);
-
       }
       else{ //TODO WRITE WARNING
-
+        document.getElementById('err-msg').innerText = "Enter Something First";
       }
     }
 
@@ -176,19 +176,57 @@
 
         var buttonLeft = document.createElement("button");
         buttonLeft.classList.add('grocery-item-button-l');
+        buttonLeft.classList.add('hover:bg-gray-100');
+        buttonLeft.addEventListener("click", function(){
+          var theNode = event.target.parentNode.firstChild;
+          if(theNode.classList.contains("grocery-item-text")){
+            theNode.classList.remove("grocery-item-text");
+            theNode.classList.add("grocery-item-checked");
+          }
+          else if(theNode.classList.contains("grocery-item-checked")){
+            theNode.classList.remove("grocery-item-checked");
+            theNode.classList.add("grocery-item-text");
+          }
+        });
 
         var buttonRight = document.createElement("button");
         buttonRight.classList.add('grocery-item-button-r');
+        buttonRight.classList.add('hover:bg-gray-100');
+        buttonRight.addEventListener("click", function(){
+          var myNode = event.target.parentNode;
+          while (myNode.firstChild) {
+            myNode.removeChild(myNode.lastChild);
+          }
+          myNode.remove();
+        });
 
         var imageLeft = document.createElement("img");
         imageLeft.setAttribute("src", "./resources/Images/images-removebg-preview.png");
         imageLeft.style.width = "16px";
         imageLeft.style.height = "16px";
+        imageLeft.addEventListener("click", function(){
+          var theNode = event.target.parentNode.parentNode.firstChild;
+          if(theNode.classList.contains("grocery-item-text")){
+            theNode.classList.remove("grocery-item-text");
+            theNode.classList.add("grocery-item-checked");
+          }
+          else if(theNode.classList.contains("grocery-item-checked")){
+            theNode.classList.remove("grocery-item-checked");
+            theNode.classList.add("grocery-item-text");
+          }
+        });
 
         var imageRight = document.createElement("img");
         imageRight.setAttribute("src", "https://uxwing.com/wp-content/themes/uxwing/download/48-checkmark-cross/cross.png");
         imageRight.style.width = "16px";
         imageRight.style.height = "16px";
+        imageRight.addEventListener("click", function(){
+          var myNode = event.target.parentNode.parentNode;
+          while (myNode.firstChild) {
+            myNode.removeChild(myNode.lastChild);
+          }
+          myNode.remove();
+        });
 
         firstDiv.appendChild(firstSpan);
         firstDiv.appendChild(buttonLeft);
@@ -196,7 +234,6 @@
         buttonLeft.appendChild(imageLeft);
         buttonRight.appendChild(imageRight);
         
-        var unorderedList = document.getElementById('list-of-grocery');
         unorderedList.appendChild(firstDiv);
     }
 
