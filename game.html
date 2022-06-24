@@ -264,11 +264,7 @@
       var gameInfo = document.getElementById("game-info");
       gameInfo.innerHTML="You Chose " + event.target.id.substring(0,1).toUpperCase() + event.target.id.substring(1);
       gameInfo.innerHTML+="\nIs that your final choice?";
-      gameInfo.innerHTML = "3";
-      waitSeconds(1);
-      gameInfo.innerHTML = "2";
-      waitSeconds(1);
-      gameInfo.innerHTML = "1";
+      //WILLIAM START WORK HERE TODO
       //x = rock, y = paper, z = scissors
       var enemyChoice = makeEnemyChoice();
       var playerChoice = event.target.id;
