@@ -142,39 +142,39 @@
       <div id="character-selector" style="margin-top: 50px auto; width: 900px;" class="justify-center characters">
         <button id="character-0">
           <div class="character-fighter">
-            <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-            <h1 class="character-fighter-txt">Bad Guy</h1>
+            <img class="character-fighter-img" style="display:block" src="./resources/images/characters/ChooseYourFighter_1.PNG">
+            <h1 class="character-fighter-txt">Lol Enemy</h1>
           </div>
         </button>
         <button id="character-1">
           <div class="character-fighter">
-            <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-            <h1 class="character-fighter-txt">Bad Guy's Friend</h1>
+            <img class="character-fighter-img" style="display:block" src="./resources/images/characters/ChooseYourFighter_2.PNG">
+            <h1 class="character-fighter-txt">Lol Enemy</h1>
           </div>
 
         </button>
         <button id="character-2">
           <div class="character-fighter">
-            <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-            <h1 class="character-fighter-txt">Friend's Dad</h1>
+            <img class="character-fighter-img" style="display:block" src="./resources/images/characters/ChooseYourFighter_3.PNG">
+            <h1 class="character-fighter-txt">Lol Enemy</h1>
           </div>
         </button>
         <button id="character-3">
           <div class="character-fighter">
-            <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-            <h1 class="character-fighter-txt">Dad's Brother</h1>
+            <img class="character-fighter-img" style="display:block" src="./resources/images/characters/ChooseYourFighter_4.PNG">
+            <h1 class="character-fighter-txt">Lol Enemy</h1>
           </div>
         </button>
         <button id="character-4">
           <div class="character-fighter">
-            <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-            <h1 class="character-fighter-txt">Brother's Boss</h1>
+            <img class="character-fighter-img" style="display:block" src="./resources/images/characters/ChooseYourFighter_5.jpeg">
+            <h1 class="character-fighter-txt">Lol Enemy</h1>
           </div>
         </button>
         <button id="character-5">
           <div class="character-fighter">
-            <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-            <h1 class="character-fighter-txt">Boss' Boss</h1>
+            <img class="character-fighter-img" style="display:block" src="./resources/images/characters/ChooseYourFighter_6.PNG">
+            <h1 class="character-fighter-txt">Lol Enemy</h1>
           </div>
         </button>
 
@@ -185,10 +185,11 @@
         style="background-repeat:no-repeat;background-image:url('resources/Images/pokemon.png'); background-size: contain;"
         class="fight">
         <div>
-          <div style="margin-bottom:145px;" class="flex">
+          <div style="margin-bottom:70px;" class="flex justify-between">
             <div id="enemy-info-space" class="opponent-name">
               Enemy Name and Health
             </div>
+            <img id="opponent-image"style="height:150px; width: 150px; margin-top: 20px; margin-right:110px; margin-bottom:0;"src="./resources/Images/characters/ChooseYourFighter_1.PNG">
           </div>
           <div class="flex">
             <div style="margin-left: auto;" class="opponent-name">
@@ -229,12 +230,30 @@
 
       </div>
     </div>
+    <div id="pop-up"class="flex justify-center">
+      <div style="text-align:center;padding:60px;width:500px; height:400px; background-color:white; border-radius:25px; border-color:rgb(165, 178, 183); border-width:3px;">
+        <div class="flex justify-center">
+          <img id='gif-thing'src="./resources/Images/gifs/Scissors Wins.gif">
+        </div>
+        <br>
+        <div id="hit-thing">You Landed a Hit!!</div>
+        <div id="continue-thing">Continue?</div>
+        <br>
+        <div class="flex justify-center">
+          <button id='try-again'style="margin:2px;"class="option-button">Yes</button>
+          <button id='dont-try-again'style="margin:2px;"class="option-button">No</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 
 
 
   <script>
+    var imgSource = '';
+    var doNothing = false;
+    var continueFight = false;
     const fight = document.getElementById('fight-space');
     const characterSelect = document.getElementById('character-selector');
     const title = document.getElementById('title-popup');
@@ -246,21 +265,41 @@
 
 
     var characterInfo = [{ name: "First Guy :D", x: 100, y: 0, z: 0 }, { name: "Second Guy", x: 50, y: 50, z: 0 }, { name: "Third Guy", x: 25, y: 50, z: 25 }, { name: "Fourth Guy", x: 10, y: 0, z: 0 }, { name: "Fifth Guy", x: 10, y: 33, z: 45 }, { name: "Sixth Guy", x: 0, y: 10, z: 10 }];
-
+    var popup = document.getElementById('pop-up');
+    popup.style.display = 'none';
 
 
 
     let currentCharacter = 0;
+    let playerChoice = 0;
 
     function startGame() {
       title.style.display = 'none';
       characterSelect.style.display = 'block';
     }
     function selectCharacter() {
-      if (event.target.parentNode.id)
+      if (event.target.parentNode.id){
         currentCharacter = event.target.parentNode.id.substring(10);
-      else
+        item = event.target;
+        var children = item.childNodes;
+
+        for(let i = 0; i < children.length; i++){
+          if(children[i].tagName == 'IMG')
+            imgSource = children[i].src;
+        }
+
+      }
+      else{
         currentCharacter = event.target.parentNode.parentNode.id.substring(10);
+        item = event.target.parentNode;
+
+        var children = item.childNodes;
+
+        for(let i = 0; i < children.length; i++){
+          if(children[i].tagName == 'IMG')
+            imgSource = children[i].src;
+        }
+      }
       setupGame();
     }
     function findFighters() {
@@ -284,17 +323,24 @@
       }
     }
     function setupGame() {
+      enemyHealth = 3;
+      playerHealth = 3;
+      document.getElementById('opponent-image').src = imgSource;
       characterSelect.style.display = 'none';
       fight.style.display = 'block';
       var enemyInfoSpace = document.getElementById('enemy-info-space');
       enemyInfoSpace.innerHTML = characterInfo[currentCharacter].name;
+      var gameInfo = document.getElementById("game-info").innerHTML = "WHAT WILL YOU DO?";
     }
     function fightButtonClicked() {
+      if(doNothing)
+        return;
       var gameInfo = document.getElementById("game-info");
       gameInfo.innerHTML = "You Chose " + event.target.id.substring(0, 1).toUpperCase() + event.target.id.substring(1);
       gameInfo.innerHTML += "<br/>Is that your final choice?";
       document.getElementById('yes-button').style.display="";
       document.getElementById('no-button').style.display="";
+      playerChoice = event.target.id;
 
     }
     document.getElementById('yes-button').addEventListener("click",choseYes);
@@ -306,7 +352,6 @@
       document.getElementById('no-button').style.display="none";
 
       var enemyChoice = makeEnemyChoice();
-      var playerChoice = event.target.id;
       if (enemyChoice == "x")
         enemyChoice = 'rock';
       else if (enemyChoice == 'y')
@@ -314,25 +359,88 @@
       else
         enemyChoice = 'scissors'
 
-
-      if (winner(playerChoice, enemyChoice) == 1) {
+      var win = winner(playerChoice,enemyChoice);
+      var hitText = document.getElementById('hit-thing');
+      var continueText = document.getElementById('continue-thing');
+      var gifPlayer = document.getElementById('gif-thing');
+      
+      if (win == 1) {
         console.log('YOU WIN');
-        gameInfo.innerHTML = "YOU WIN";
+        hitText.innerHTML = "You Landed a Hit!"
+        enemyHealth--;
       }
-      else if (winner(playerChoice, enemyChoice) == 2) {
+      else if (win == 2) {
         console.log('YOU LOSE');
-        gameInfo.innerHTML = "YOU LOSE"
+        hitText.innerHTML = "You Got Hit!!"
+        playerHealth--;
       }
       else {
         console.log('YOU TIE');
-        gameInfo.innerHTML = "YOU TIE"
+        hitText.innerHTML = "You Tied lol";
+      }
+      
+
+      if(playerHealth < 1){
+        hitText.innerHTML += "<br/>Dang you lost"
+        continueText.innerHTML = "Do you want to try again?";
+        continueFight = true;
+      }
+      else{
+        if(enemyHealth < 1){
+          hitText.innerHTML += "<br/> :0 You Won!!"
+          continueText.innerHTML = "Want to pick your next challenger?";
+          continueFight = false;
+        }
+        else{
+          continueText.innerHTML = "Want to continue fighting?";
+          continueFight = true;
+        }
+      }
+
+      popup.style.display = 'block';
+      doNothing = true;
+
+      console.log("player " + playerHealth);
+      console.log("enemy " + enemyHealth);
+
+    }
+
+    function backToMenu(){
+      document.getElementById('fight-space').style.display = 'none';
+      document.getElementById('character-selector').style.display = 'block';
+    }
+
+
+    document.getElementById('try-again').addEventListener('click', continueYes);
+    document.getElementById('dont-try-again').addEventListener('click', continueNo);
+
+
+    function continueYes(){
+      doNothing = false;
+      popup.style.display = "none";
+      if(continueFight){
+        setupGame();
+      }
+      else{
+        backToMenu();
       }
     }
+    function continueNo(){
+      doNothing = false;
+      popup.style.display = "none";
+      if(continueFight){
+        backToMenu();
+      }
+      else
+        setupGame();
+
+    }
+
+
     function choseNo() {
-      var gameInfo = document.getElementById("game-info");
-      gameInfo.innerHTML = "WHAT WILL YOU DO?";
       document.getElementById('yes-button').style.display="none";
       document.getElementById('no-button').style.display="none";
+      setupGame();
     }
 
     function makeEnemyChoice() {
@@ -370,16 +478,14 @@
         }
       }
 
-
-      console.log(nums);
-
       newNum = Math.random() * 100;
-      console.log(nums[Math.round(newNum)]);
       return nums[Math.round(newNum)];
 
 
     }
     function winner(player, computer) {
+      console.log('player ' + player)
+      console.log('computer ' + computer)
       player = player.toLowerCase();
       computer = computer.toLowerCase();
       if (player == 'forfeit')
