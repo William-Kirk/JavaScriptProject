@@ -96,114 +96,364 @@
       </div>
     </nav>
   </header>
-  <div id="title-popup" style="margin: 50px;" class="flex justify-center">
-    <div
-      style="border-radius: 15px; border:solid rgb(138, 158, 171) 3px;background-size:400px;width:800px; height:500px;"
-      class="bg-white shadow sm:rounded-lg">
-      <div class="px-4 py-5 sm:p-6">
-        <hr style="margin-top:25px">
-        <!-- <img style="margin: 0 auto; width: 400px; height:100px;"src="./resources/Images/rckprsr.png"> -->
-        <h1
-          style="margin: 15px 160px; text-align: center; font-size: xx-large; font-weight: bold; color:rgb(56, 63, 67);"
-          class="">Rock Paper Scissors</h1>
-        <hr>
-        <div style="margin-top:8px;" class="flex justify-center">
-          <div style="margin: 0 10px;">
-            <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
-              <p>Oh no! Bad guys! They terrorize the town with their epic rock paper scissor skills! You're going to
-                need to beat them at their own game!</p>
-            </div>
-          </div>
-          <div style="margin: 0 8px;">
-            <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
-              <p>Heres the instructions on how to play, but I havent come up with those yet, so good luck!</p>
-            </div>
-          </div>
-          <div style="margin: 0 8px;">
-            <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
-              <p>Good luck defeating all eight of the master rock paper scissor fighters!</p>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top: 50px;" class="mt-5 flex justify-center">
-          <button type="button" id="start-game-button" style="font-size: large; padding: 25px 50px;"
-            class="bg-gray-50 inline-flex items-center px-4 py-2 border font-medium rounded-md text-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
-            Start Game!
+
+  <!-- This example requires Tailwind CSS v2.0+ -->
+<!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+<div>
+  <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+  <div class="relative z-40 md:hidden" role="dialog" aria-modal="true">
+    <!--
+      Off-canvas menu backdrop, show/hide based on off-canvas menu state.
+
+      Entering: "transition-opacity ease-linear duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "transition-opacity ease-linear duration-300"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
+
+    <div class="fixed inset-0 flex z-40">
+      <!--
+        Off-canvas menu, show/hide based on off-canvas menu state.
+
+        Entering: "transition ease-in-out duration-300 transform"
+          From: "-translate-x-full"
+          To: "translate-x-0"
+        Leaving: "transition ease-in-out duration-300 transform"
+          From: "translate-x-0"
+          To: "-translate-x-full"
+      -->
+      <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white">
+        <!--
+          Close button, show/hide based on off-canvas menu state.
+
+          Entering: "ease-in-out duration-300"
+            From: "opacity-0"
+            To: "opacity-100"
+          Leaving: "ease-in-out duration-300"
+            From: "opacity-100"
+            To: "opacity-0"
+        -->
+        <div class="absolute top-0 right-0 -mr-12 pt-2">
+          <button type="button" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <span class="sr-only">Close sidebar</span>
+            <!-- Heroicon name: outline/x -->
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
+
+        <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+          <div class="flex-shrink-0 flex items-center px-4">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg" alt="Workflow">
+          </div>
+          <nav class="mt-5 px-2 space-y-1">
+            <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+            <a href="#" class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+              <!--
+                Heroicon name: outline/home
+
+                Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500"
+              -->
+              <svg class="text-gray-500 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              Dashboard
+            </a>
+
+            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+              <!-- Heroicon name: outline/users -->
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              Team
+            </a>
+
+            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+              <!-- Heroicon name: outline/folder -->
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+              </svg>
+              Projects
+            </a>
+
+            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+              <!-- Heroicon name: outline/calendar -->
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Calendar
+            </a>
+
+            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+              <!-- Heroicon name: outline/inbox -->
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+              </svg>
+              Documents
+            </a>
+
+            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+              <!-- Heroicon name: outline/chart-bar -->
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              Reports
+            </a>
+          </nav>
+        </div>
+        <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+          <a href="#" class="flex-shrink-0 group block">
+            <div class="flex items-center">
+              <div>
+                <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </div>
+              <div class="ml-3">
+                <p class="text-base font-medium text-gray-700 group-hover:text-gray-900">Tom Cook</p>
+                <p class="text-sm font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 w-14">
+        <!-- Force sidebar to shrink to fit close icon -->
       </div>
     </div>
   </div>
-  <div class="flex justify-center">
-    <div id="character-selector" style="margin-top: 50px auto; width: 1200px;" class="justify-center characters">
-      <button id="character-0" class="character-fighter">
-        <img style="display:block" src="./resources/images/gon.jpg">
-      </button>
-      <button id="character-1" class="character-fighter">
-        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-      </button>
-      <button id="character-2" class="character-fighter">
-        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-      </button>
-      <button id="character-3" class="character-fighter">
-        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-      </button>
-      <button id="character-4" class="character-fighter">
-        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-      </button>
-      <button id="character-5" class="character-fighter">
-        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-      </button>
-      <button id="character-6" class="character-fighter">
-        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-      </button>
-      <button id="character-7" class="character-fighter">
-        <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
-      </button>
 
+  <!-- Static sidebar for desktop -->
+  <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+    <!-- Sidebar component, swap this element with another sidebar if you like -->
+    <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
+      <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+        <div class="flex items-center flex-shrink-0 px-4">
+          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg" alt="Workflow">
+        </div>
+        <nav class="mt-5 flex-1 px-2 bg-white space-y-1">
+          <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+          <a href="#" class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            <!--
+              Heroicon name: outline/home
+
+              Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500"
+            -->
+            <svg class="text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Dashboard
+          </a>
+
+          <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            <!-- Heroicon name: outline/users -->
+            <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            Team
+          </a>
+
+          <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            <!-- Heroicon name: outline/folder -->
+            <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+            </svg>
+            Projects
+          </a>
+
+          <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            <!-- Heroicon name: outline/calendar -->
+            <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Calendar
+          </a>
+
+          <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            <!-- Heroicon name: outline/inbox -->
+            <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+            </svg>
+            Documents
+          </a>
+
+          <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+            <!-- Heroicon name: outline/chart-bar -->
+            <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+            Reports
+          </a>
+        </nav>
+      </div>
+      <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+        <a href="#" class="flex-shrink-0 w-full group block">
+          <div class="flex items-center">
+            <div>
+              <img class="inline-block h-9 w-9 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">Tom Cook</p>
+              <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-  <div id="fight-space"; style="background-repeat:no-repeat;background-image:url('resources/Images/pokemon.png'); background-size: contain;"class="fight">
-    <div>
-      <div style="margin-bottom:145px;" class="flex">
-        <div id="enemy-info-space" class="opponent-name">
-          Enemy Name and Health
-        </div>
-      </div>
-      <div class="flex">
-        <div style="margin-left: auto;" class="opponent-name">
-          Your Health
-        </div>
-      </div>
-      <div style="padding: 15px 0;background-color: rgb(215, 244, 255);" class="bottom flex justify-end">
-        <div class="flex justify-between">
-          <div id="game-info"style="width:250px;font-weight: bold; padding: 30px;margin-left: 15px;border: black 3px solid;">
-            WHAT WILL YOU DO?
-          </div>
-        </div>
-        <div style="margin-left: auto;">
-          <div class="flex">
-            <button id="rock"class="attack-button">
-              Rock
-            </button>
-            <button id="scissors"class="attack-button">
-              Scissors
-            </button>
-          </div>
-          <div class="flex">
-            <button id="paper"class="attack-button">
-              Paper
-            </button>
-            <button id="forfeit"class="attack-button">
-              Forfeit
-            </button>
-          </div>
-        </div>
-
-      </div>
+  <div class="md:pl-64 flex flex-col flex-1">
+    <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-100">
+      <button type="button" class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+        <span class="sr-only">Open sidebar</span>
+        <!-- Heroicon name: outline/menu -->
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
+    <main class="flex-1">
+      <div class="py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <!-- Replace with your content -->
+          <div>
+            <div id="title-popup" style="margin: 50px;" class="flex justify-center">
+              <div
+                style="border-radius: 15px; border:solid rgb(138, 158, 171) 3px;background-size:400px;width:800px; height:500px;"
+                class="bg-white shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                  <hr style="margin-top:25px">
+                  <!-- <img style="margin: 0 auto; width: 400px; height:100px;"src="./resources/Images/rckprsr.png"> -->
+                  <h1
+                    style="margin: 15px 160px; text-align: center; font-size: xx-large; font-weight: bold; color:rgb(56, 63, 67);"
+                    class="">Rock Paper Scissors</h1>
+                  <hr>
+                  <div style="margin-top:8px;" class="flex justify-center">
+                    <div style="margin: 0 10px;">
+                      <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
+                        <p>Oh no! Bad guys! They terrorize the town with their epic rock paper scissor skills! You're going to
+                          need to beat them at their own game!</p>
+                      </div>
+                    </div>
+                    <div style="margin: 0 8px;">
+                      <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
+                        <p>Heres the instructions on how to play, but I havent come up with those yet, so good luck!</p>
+                      </div>
+                    </div>
+                    <div style="margin: 0 8px;">
+                      <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
+                        <p>Good luck defeating all eight of the master rock paper scissor fighters!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top: 50px;" class="mt-5 flex justify-center">
+                    <button type="button" id="start-game-button" style="font-size: large; padding: 25px 50px;"
+                      class="bg-gray-50 inline-flex items-center px-4 py-2 border font-medium rounded-md text-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
+                      Start Game!
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div id="character-selector" style="margin-top: 50px auto; width: 1200px;" class="justify-center characters">
+                <button id="character-0" class="character-fighter">
+                  <img style="display:block" src="./resources/images/gon.jpg">
+                </button>
+                <button id="character-1" class="character-fighter">
+                  <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+                </button>
+                <button id="character-2" class="character-fighter">
+                  <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+                </button>
+                <button id="character-3" class="character-fighter">
+                  <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+                </button>
+                <button id="character-4" class="character-fighter">
+                  <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+                </button>
+                <button id="character-5" class="character-fighter">
+                  <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+                </button>
+                <button id="character-6" class="character-fighter">
+                  <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+                </button>
+                <button id="character-7" class="character-fighter">
+                  <img class="character-fighter-img" style="display:block" src="./resources/images/gon.jpg">
+                </button>
+        
+              </div>
+            </div>
+            <div id="fight-space" ;
+              style="background-repeat:no-repeat;background-image:url('resources/Images/pokemon.png'); background-size: contain;"
+              class="fight">
+              <div>
+                <div style="margin-bottom:145px;" class="flex">
+                  <div id="enemy-info-space" class="opponent-name">
+                    Enemy Name and Health
+                  </div>
+                </div>
+                <div class="flex">
+                  <div style="margin-left: auto;" class="opponent-name">
+                    Your Health
+                  </div>
+                </div>
+                <div style="padding: 15px 0;background-color: rgb(215, 244, 255);" class="bottom flex justify-end">
+                  <div class="flex justify-between">
+                    <div id="game-info"
+                      style="width:250px;font-weight: bold; padding: 30px;margin-left: 15px;border: black 3px solid;">
+                      WHAT WILL YOU DO?
+                    </div>
+                  </div>
+                  <div style="margin-left: auto;">
+                    <div class="flex">
+                      <button id="rock" class="attack-button">
+                        Rock
+                      </button>
+                      <button id="scissors" class="attack-button">
+                        Scissors
+                      </button>
+                    </div>
+                    <div class="flex">
+                      <button id="paper" class="attack-button">
+                        Paper
+                      </button>
+                      <button id="forfeit" class="attack-button">
+                        Forfeit
+                      </button>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+        
+            </div>
+          </div>
 
+          <!-- /End replace -->
+        </div>
+      </div>
+    </main>
   </div>
+</div>
+
+
+
+
+
+
   <script>
     const fight = document.getElementById('fight-space');
     const characterSelect = document.getElementById('character-selector');
@@ -213,84 +463,84 @@
     //x = rock, y = paper, z = scissors
 
 
-    var characterInfo = [{name:"First Guy :D",x:100,y:0,z:0},{name:"Second Guy",x:50,y:50,z:0},{name:"Third Guy",x:25,y:50,z:25},{name:"Fourth Guy",x:10,y:0,z:0},{name:"Fifth Guy",x:10,y:33,z:45},{name:"Sixth Guy",x:0,y:10,z:10},{name:"Seventh Guy",x:10,y:39,z:0},{name:"Eighth Guy",x:5,y:5,z:0}];
-    
-    
-    
+    var characterInfo = [{ name: "First Guy :D", x: 100, y: 0, z: 0 }, { name: "Second Guy", x: 50, y: 50, z: 0 }, { name: "Third Guy", x: 25, y: 50, z: 25 }, { name: "Fourth Guy", x: 10, y: 0, z: 0 }, { name: "Fifth Guy", x: 10, y: 33, z: 45 }, { name: "Sixth Guy", x: 0, y: 10, z: 10 }, { name: "Seventh Guy", x: 10, y: 39, z: 0 }, { name: "Eighth Guy", x: 5, y: 5, z: 0 }];
+
+
+
     let currentCharacter = 0;
 
     function startGame() {
       title.style.display = 'none';
       characterSelect.style.display = 'block';
     }
-    function selectCharacter(){
-      if(event.target.id){
+    function selectCharacter() {
+      if (event.target.id) {
         currentCharacter = event.target.id.substring(10);
         console.log(currentCharacter);
       }
-      else{
+      else {
         currentCharacter = event.target.parentNode.id.substring(10);
         console.log(currentCharacter);
       }
       setupGame();
     }
-    function findFighters(){
+    function findFighters() {
       var fighterSelectButtons = document.getElementsByClassName("character-fighter");
       var fighterSelectImages = document.getElementsByClassName("character-fighter");
       var count = fighterSelectButtons.length;
       for (let i = 0; i < count; i++) {
-        fighterSelectButtons[i].addEventListener("click",selectCharacter);
+        fighterSelectButtons[i].addEventListener("click", selectCharacter);
       }
       count = fighterSelectImages.length;
       for (let i = 0; i < count; i++) {
-        fighterSelectImages[i].addEventListener("click",selectCharacter);
+        fighterSelectImages[i].addEventListener("click", selectCharacter);
       }
     }
-    function findFightButtons(){
+    function findFightButtons() {
       var fightButtons = document.getElementsByClassName("attack-button");
       var count = fightButtons.length;
-      for(let i = 0; i< count; i++){
-        fightButtons[i].addEventListener("click",fightButtonClicked);
-        
+      for (let i = 0; i < count; i++) {
+        fightButtons[i].addEventListener("click", fightButtonClicked);
+
       }
     }
-    function setupGame(){
+    function setupGame() {
       characterSelect.style.display = 'none';
       fight.style.display = 'block';
       var enemyInfoSpace = document.getElementById('enemy-info-space');
       enemyInfoSpace.innerHTML = characterInfo[currentCharacter].name;
     }
-    function fightButtonClicked(){
+    function fightButtonClicked() {
       var gameInfo = document.getElementById("game-info");
-      gameInfo.innerHTML="You Chose " + event.target.id.substring(0,1).toUpperCase() + event.target.id.substring(1);
-      gameInfo.innerHTML+="\nIs that your final choice?";
+      gameInfo.innerHTML = "You Chose " + event.target.id.substring(0, 1).toUpperCase() + event.target.id.substring(1);
+      gameInfo.innerHTML += "\nIs that your final choice?";
       //WILLIAM START WORK HERE TODO
       //x = rock, y = paper, z = scissors
       var enemyChoice = makeEnemyChoice();
       var playerChoice = event.target.id;
-      if(enemyChoice == "x")
+      if (enemyChoice == "x")
         enemyChoice = 'rock';
-      else if(enemyChoice == 'y')
+      else if (enemyChoice == 'y')
         enemyChoice = 'paper';
       else
         enemyChoice = 'scissors'
 
 
-      if(winner(playerChoice, enemyChoice) == 1){
+      if (winner(playerChoice, enemyChoice) == 1) {
         console.log('YOU WIN');
-        gameInfo.innerHTML="YOU WIN";
+        gameInfo.innerHTML = "YOU WIN";
       }
-      else if(winner(playerChoice, enemyChoice) == 2) {
+      else if (winner(playerChoice, enemyChoice) == 2) {
         console.log('YOU LOSE');
-        gameInfo.innerHTML="YOU LOSE"
+        gameInfo.innerHTML = "YOU LOSE"
       }
-      else{
+      else {
         console.log('YOU TIE');
-        gameInfo.innerHTML="YOU TIE"
+        gameInfo.innerHTML = "YOU TIE"
       }
-      
+
     }
-    function makeEnemyChoice(){
+    function makeEnemyChoice() {
       //var random = Math.random() * 100; //Number between 0 and 99
       //lets say we have a bias of choosing x 60% of the time
       //lets say we have a bias of choosing z 30% of the time
@@ -299,26 +549,26 @@
       var z = characterInfo[currentCharacter].z
       var nums = [];
       var count = 0;
-      for(let i = 0; i < x; i++){
-        if(i != x)
+      for (let i = 0; i < x; i++) {
+        if (i != x)
           nums.push('x')
       }
 
-      for(let i = 0; i < y; i++){
-        if(i != y)
+      for (let i = 0; i < y; i++) {
+        if (i != y)
           nums.push('y')
       }
 
-      for(let i = 0; i < z; i++){
-        if(i != z)
+      for (let i = 0; i < z; i++) {
+        if (i != z)
           nums.push('z')
       }
-      while(nums.length < 100){
+      while (nums.length < 100) {
         randomNum = Math.random();
-        if(randomNum < .33)
+        if (randomNum < .33)
           nums.push('x');
-        else{
-          if(randomNum < .66)
+        else {
+          if (randomNum < .66)
             nums.push('y');
           else
             nums.push('z');
@@ -334,40 +584,40 @@
 
 
     }
-    function winner(player,computer){
-        player = player.toLowerCase();
-        computer = computer.toLowerCase();
-        if(player == 'forfeit')
+    function winner(player, computer) {
+      player = player.toLowerCase();
+      computer = computer.toLowerCase();
+      if (player == 'forfeit')
+        return 2;
+      if (player === computer) {
+        return 3;
+      }
+      else if (player == 'rock') {
+        if (computer == 'paper') {
           return 2;
-        if(player === computer){
-            return 3;
+
+        } else {
+          return 1;
         }
-        else if(player == 'rock'){
-            if(computer == 'paper'){
-                return 2;
- 
-            }else{
-                return 1;
-            }
+      }
+      else if (player == 'scissors') {
+        if (computer == 'rock') {
+          return 2;
+        } else {
+          return 1;
         }
-        else if(player == 'scissors'){
-            if(computer == 'rock'){
-                return 2;
-            }else{
-                return 1;
-            }
+      }
+      else if (player == 'paper') {
+        if (computer == 'scissors') {
+          return 2;
+        } else {
+          return 1;
         }
-        else if(player == 'paper'){
-            if(computer == 'scissors'){
-                return 2;
-            }else{
-                return 1;
-            }
-        }
+      }
     }
-    function waitSeconds(seconds){
+    function waitSeconds(seconds) {
       var start = new Date().getSeconds();
-      while(new Date().getSeconds() < start+seconds){}
+      while (new Date().getSeconds() < start + seconds) { }
     }
 
 
@@ -376,7 +626,7 @@
     findFighters();
     findFightButtons();
     makeEnemyChoice();
-    
+
 
   </script>
 </body>
