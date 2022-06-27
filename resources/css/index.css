@@ -249,3 +249,8 @@ input:focus{
     padding: 10px;
     width:50px;
 }
+
+.option-button:hover{
+    background-color: rgb(152, 202, 246);
+    border-color: rgb(109, 168, 217);
+}
