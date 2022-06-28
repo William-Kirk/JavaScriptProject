@@ -10,390 +10,373 @@
 
 <body class="h-full">
 
-  <!-- Content area -->
-  <div class="flex-1 flex flex-col overflow-hidden">
-    <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
-      <!-- Sidebar component, swap this element with another sidebar if you like -->
-      <div class="flex flex-col flex-grow border-r border-gray-200 pt-5 bg-white overflow-y-auto">
-        <div style="margin-top:20px; font-weight: 400; font-size: x-large;"class="justify-center flex items-center flex-shrink-0 px-4">
-          <h1>William's Project</h1>
-        </div>
-        <div class="mt-5 flex-grow flex flex-col">
-          <nav style="margin-top:10px;"class="flex-1 px-2 pb-4">
-            <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
-            <a href="#"
-              class="href-things bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-              <!--
-                  Heroicon name: outline/home
-    
-                  Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500"
-                -->
-              <svg class="text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              Dashboard
-            </a>
-
-            <a href="#"
-              class="href-things text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-              <!-- Heroicon name: outline/users -->
-              <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-              Tip Calculator
-            </a>
-
-            <a href="#"
-              class="href-things text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-              <!-- Heroicon name: outline/folder -->
-              <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-              </svg>
-              Grocery List
-            </a>
-
-            <a href="#"
-              class="href-things text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-              <!-- Heroicon name: outline/calendar -->
-              <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Rock Paper Scissors
-            </a>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <div class="md:pl-64 flex flex-col flex-1">
-
-
-
-      <!-- Main content -->
-      <div class="flex-1 flex items-stretch overflow-hidden">
-        <main class="flex-1 overflow-y-auto">
-          <!-- Primary column -->
-          <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col lg:order-last">
+  <div>
+    <header>
+      <!-- This example requires Tailwind CSS v2.0+ -->
+      <nav class="bg-white shadow">
+        <div class="mx-auto px-2 sm:px-6 lg:px-8">
+          <!--figure out a way to set the minimum width to something that makes sense-->
+          <div class="flex">
+            <div class="flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex-shrink-0 flex justify-center items-center">
+                <div class="text-2xl font-bold text-gray-700"
+                  style="width:352px; height:100%; border:solid 1px #e5e7eb; border-top: 0; border-bottom:0; border-left:0;">
+                  <h1>
+                    William's Project
+                  </h1>
+                </div>
+              </div>
+            </div>
             <div>
-              <div>
-                <nav
-                  style="margin-top: 30px;" class="flex justify-center">
-                  <div style="width:770px;"class="flex items-center justify-center h-16">
-                    <div class="flex-1 flex px-2 lg:ml-6 justify-between">
-                      <div class="max-w-lg w-full lg:max-w-xs">
-                        <label for="search" class="sr-only">Search</label>
-                        <div class="relative">
-                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <!-- Heroicon name: solid/search -->
-                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                              fill="currentColor" aria-hidden="true">
-                              <path fill-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                clip-rule="evenodd" />
-                            </svg>
-                          </div>
-                          <input id="search" name="search"
-                            class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
-                            placeholder="Search" type="search">
-                        </div>
-                      </div>
-                      <div style="margin-right:45px; margin-top:10px;">lol</div>
-                    </div>
-                  </div>
-                </nav>
-              </div>
-              <div>
-                <div>
-                  <div style="margin-top:30px;" class="relative z-10" role="dialog" aria-modal="true">
-                    <div class="flex md:items-center justify-center min-h-full text-center">
-                      <div style="border-radius:12px;background-color:rgb(212, 235, 255)"
-                        class="relative flex items-center px-4 pt-14 pb-8 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
-                        <div style="margin: 0 auto;" class="flex">
-                          <div style="width: 300px; height:240px;" class="">
-                            <div class="flex justify-between">
-                              <div style="margin-left:10px;"class="flex">
-                                <img style="margin-top:5px;width:20px; height:20px;" src="./resources/Images/images-removebg-preview.png"alt="">
-                                <h1 style="padding-bottom:10px;margin-right: 50px; font-size: 20px; color:rgb(53, 94, 140)">Carrollton</h1>
-                              </div>
-                              <h1 style="margin-right:25px;margin-top:9px;font-size: 11px; color:rgb(52, 88, 130);">Today 2:31PM</h1>
-                            </div>
-                            <div style="text-align: center;">
-                              <h1
-                                style="margin-top:30px;margin-bottom:20px; font-size:70px; color:rgb(59, 92, 130); line-height:55px;">
-                                85</h1>
-                            </div>
-                            <div style="font-size:14px;text-align: center;">
-                              <h1>Mostly Clear</h1>
-                            </div>
-                            <div style="margin-top:40px;" class="flex justify-between">
-                              <h1 style="margin-left: 35px;">720hpa</h1>
-                              <h1>32%</h1>
-                              <h1 style="margin-right:35px;">12km/h</h1>
-                            </div>
-                          </div>
-                          <div
-                            style="border-radius:10px;background-color:rgba(255, 255, 255, 0.423);padding:20px;margin-left:17px;width: 300px; height:240px;">
-
-                            <h1>Temperature</h1>
-                            <div style="padding:30px 30px;">
-                              <ul class="flex justify-between">
-                                <li>
-                                  <div class="temp-col"></div>
-                                </li>
-                                <li>
-                                  <div class="temp-col"></div>
-                                </li>
-                                <li>
-                                  <div class="temp-col"></div>
-                                </li>
-                                <li>
-                                  <div class="temp-col"></div>
-                                </li>
-                              </ul>
-                              <ul style="font-size: 11px;" class="flex justify-between">
-                                <li>Morning</li>
-                                <li>Afternoon</li>
-                                <li>Evening</li>
-                                <li>Night</li>
-                              </ul>
-                              <ul style="font-size: 11px;" class="flex justify-between">
-                                <li>90</li>
-                                <li>101</li>
-                                <li>96</li>
-                                <li>90</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="relative z-10" role="dialog" aria-modal="true">
-                  <div class="flex items-stretch justify-center md:items-center min-h-full text-center md:px-2 lg:px-4">
-                    <div class="mini-panel mini-panel-top">
-                      <div style="margin: 0 auto;" class="flex">
-                        <div style="width: 258px; height:80px;" class="flex">
-                          <div style="text-align: start;">
-                            <h1>Wind</h1>
-                            <h1>Today's Wind Speed</h1>
-                            <h1>12km/h</h1>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mini-panel mini-panel-top">
-                      <div style="margin: 0 auto;" class="flex">
-                        <div style="width: 258px; height:80px;" class="flex">
-                          <div style="text-align:start">
-                            <h1>Chance of Rain</h1>
-                            <h1>Today's Rain Chance</h1>
-                            <h1>15%</h1>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="relative z-10" role="dialog" aria-modal="true">
-                  <div class="flex items-stretch justify-center md:items-center min-h-full text-center md:px-2 lg:px-4">
-                    <div class="mini-panel mini-panel-bottom">
-                      <div style="margin: 0 auto;" class="flex">
-                        <div style="width: 258px; height:80px;" class="flex">
-                          <div style="text-align: start;">
-                            <h1>Pressure</h1>
-                            <h1>Today's Pressure</h1>
-                            <h1>720 hpa</h1>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mini-panel mini-panel-bottom">
-                      <div style="margin: 0 auto;" class="flex">
-                        <div style="width: 258px; height:80px;" class="flex">
-                          <div style="text-align:start">
-                            <h1>UV Index</h1>
-                            <h1>Today's UV Index</h1>
-                            <h1>2</h1>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div style="margin-top:13px;">
+                <input type="email" name="email" id="email"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  placeholder="75000">
               </div>
             </div>
-          </section>
-        </main>
 
-        <!-- Secondary column (hidden on smaller screens) -->
-        <aside class="hidden w-96 bg-white border-l border-gray-200 overflow-y-auto lg:block">
-          <div style="padding: 20px; padding-top:0px;">
-            <div style="margin-top:50px; padding: 0px; font-size: large; font-weight: 500;"
-              class="flex justify-between">
-              <button>
-                〈
-              </button>
-              <h1>
-                HELLO
-              </h1>
-              <button>
-                〉
-              </button>
-            </div>
 
-            <div style="padding:12px;">
-              <div style="margin: 20px 0; margin-top:30px">
-                <h1>Today</h1>
+            <div class="relative flex justify-between h-16">
+              <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                  <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+                  <a href="./index.html"
+                    class="border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    Tip Calculator
+                  </a>
+                  <a href="./grocery.html"
+                    class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    Grocery List
+                  </a>
+                  <a href="./game.html"
+                    class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    Rock, Paper, Scissors
+                  </a>
+                  <a href="./weather.html"
+                    class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    Weather Dashboard
+                  </a>
+                </div>
               </div>
-              <ul class="flex justify-between" style="font-size:12px;">
-                <li class="mini-weather">
-                  <div style="text-align:center; margin-bottom:8px;">lol</div>
-                  <img style="height:15px; width:15px;"src="./resources/Images/images-removebg-preview.png">
-                  <div style="text-align:center;">24</div>
-                </li>
-                <li class="mini-weather">
-                  <div style="text-align:center; margin-bottom:8px;">lol</div>
-                  <img style="height:15px; width:15px;"src="./resources/Images/images-removebg-preview.png">
-                  <div style="text-align:center;">24</div>
-                </li>
-                <li class="mini-weather">
-                  <div style="text-align:center; margin-bottom:8px;">lol</div>
-                  <img style="height:15px; width:15px; margin-bottom:8px;"src="./resources/Images/images-removebg-preview.png">
-                  <div style="text-align:center;">24</div>
-                </li>
-                <li class="mini-weather">
-                  <div style="text-align:center;">lol</div>
-                  <img style="height:15px; width:15px;"src="./resources/Images/images-removebg-preview.png">
-                  <div style="text-align:center;">24</div>
-                </li>
-              </ul>
-              <ul style="margin-top: 40px;">
-                <li class="mini-other-weather">
-                  <div class="flex justify-between">
-                    <div>
-                      <h1>
-                        Tomorrow
-                      </h1>
-                      <h1>
-                        Date
-                      </h1>
-                    </div>
-                    <div>
-                      <h1>
-                        LOL
-                      </h1>
-                    </div>
-                    <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-                  </div>
-                </li>
-                <li class="mini-other-weather">
-                  <div class="flex justify-between">
-                    <div>
-                      <h1>
-                        Tomorrow
-                      </h1>
-                      <h1>
-                        Date
-                      </h1>
-                    </div>
-                    <div>
-                      <h1>
-                        LOL
-                      </h1>
-                    </div>
-                    <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-                  </div>
-                </li><li class="mini-other-weather">
-                  <div class="flex justify-between">
-                    <div>
-                      <h1>
-                        Tomorrow
-                      </h1>
-                      <h1>
-                        Date
-                      </h1>
-                    </div>
-                    <div>
-                      <h1>
-                        LOL
-                      </h1>
-                    </div>
-                    <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-                  </div>
-                </li><li class="mini-other-weather">
-                  <div class="flex justify-between">
-                    <div>
-                      <h1>
-                        Tomorrow
-                      </h1>
-                      <h1>
-                        Date
-                      </h1>
-                    </div>
-                    <div>
-                      <h1>
-                        LOL
-                      </h1>
-                    </div>
-                    <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-                  </div>
-                </li><li class="mini-other-weather">
-                  <div class="flex justify-between">
-                    <div>
-                      <h1>
-                        Tomorrow
-                      </h1>
-                      <h1>
-                        Date
-                      </h1>
-                    </div>
-                    <div>
-                      <h1>
-                        LOL
-                      </h1>
-                    </div>
-                    <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-                  </div>
-                </li><li class="mini-other-weather">
-                  <div class="flex justify-between">
-                    <div>
-                      <h1>
-                        Tomorrow
-                      </h1>
-                      <h1>
-                        Date
-                      </h1>
-                    </div>
-                    <div>
-                      <h1>
-                        LOL
-                      </h1>
-                    </div>
-                    <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-                  </div>
-                </li>
-              </ul>
             </div>
           </div>
-        </aside>
+
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="pt-2 pb-4 space-y-1">
+            <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+            <a href="./index.html"
+              class="bg-indigo-50 border-indigo-900 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Tip
+              Calculator</a>
+            <a href="./grocery.html"
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Grocery
+              List</a>
+            <a href="./game.html"
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Rock,
+              Paper, Scissors</a>
+            <a href="./weather.html"
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Weather
+              Dashboard</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+
+  <!-- Main content -->
+  <div class="flex-1 flex items-stretch overflow-hidden">
+    <aside class="hidden w-96 border-r border-gray-200 overflow-y-auto lg:block">
+      <div style="padding: 20px; padding-top:0px;">
+        <div>Gotta come up with something to put on this side</div>
       </div>
-    </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto">
+      <!-- Primary column -->
+      <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col lg:order-last">
+        <div>
+          <div>
+            <div>
+              <div style="margin-top:30px;" class="relative z-10" role="dialog" aria-modal="true">
+                <div class="flex md:items-center justify-center min-h-full text-center">
+                  <div style="border-radius:12px;background-color:rgb(212, 235, 255)"
+                    class="relative flex items-center px-4 pt-14 pb-8 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
+                    <div style="margin: 0 auto;" class="flex">
+                      <div style="width: 300px; height:240px;" class="">
+                        <div class="flex justify-between">
+                          <div style="margin-left:10px;" class="flex">
+                            <img style="margin-top:5px;width:20px; height:20px;"
+                              src="./resources/Images/images-removebg-preview.png" alt="">
+                            <h1 style="padding-bottom:10px;margin-right: 50px; font-size: 20px; color:rgb(53, 94, 140)">
+                              Carrollton</h1>
+                          </div>
+                          <h1 style="margin-right:25px;margin-top:9px;font-size: 11px; color:rgb(52, 88, 130);">
+                            Today 2:31PM</h1>
+                        </div>
+                        <div style="text-align: center;">
+                          <h1
+                            style="margin-top:30px;margin-bottom:20px; font-size:70px; color:rgb(59, 92, 130); line-height:55px;">
+                            85</h1>
+                        </div>
+                        <div style="font-size:14px;text-align: center;">
+                          <h1>Mostly Clear</h1>
+                        </div>
+                        <div style="margin-top:40px;" class="flex justify-between">
+                          <h1 style="margin-left: 35px;">720hpa</h1>
+                          <h1>32%</h1>
+                          <h1 style="margin-right:35px;">12km/h</h1>
+                        </div>
+                      </div>
+                      <div
+                        style="border-radius:10px;background-color:rgba(255, 255, 255, 0.423);padding:20px;margin-left:17px;width: 300px; height:240px;">
+
+                        <h1>Temperature</h1>
+                        <div style="padding:30px 30px;">
+                          <ul class="flex justify-between">
+                            <li>
+                              <div class="temp-col"></div>
+                            </li>
+                            <li>
+                              <div class="temp-col"></div>
+                            </li>
+                            <li>
+                              <div class="temp-col"></div>
+                            </li>
+                            <li>
+                              <div class="temp-col"></div>
+                            </li>
+                          </ul>
+                          <ul style="font-size: 11px;" class="flex justify-between">
+                            <li>Morning</li>
+                            <li>Afternoon</li>
+                            <li>Evening</li>
+                            <li>Night</li>
+                          </ul>
+                          <ul style="font-size: 11px;" class="flex justify-between">
+                            <li>90</li>
+                            <li>101</li>
+                            <li>96</li>
+                            <li>90</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative z-10" role="dialog" aria-modal="true">
+              <div class="flex items-stretch justify-center md:items-center min-h-full text-center md:px-2 lg:px-4">
+                <div class="mini-panel mini-panel-top">
+                  <div style="margin: 0 auto;" class="flex">
+                    <div style="width: 258px; height:80px;" class="flex">
+                      <div style="text-align: start;">
+                        <h1>Wind</h1>
+                        <h1>Today's Wind Speed</h1>
+                        <h1>12km/h</h1>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="mini-panel mini-panel-top">
+                  <div style="margin: 0 auto;" class="flex">
+                    <div style="width: 258px; height:80px;" class="flex">
+                      <div style="text-align:start">
+                        <h1>Chance of Rain</h1>
+                        <h1>Today's Rain Chance</h1>
+                        <h1>15%</h1>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative z-10" role="dialog" aria-modal="true">
+              <div class="flex items-stretch justify-center md:items-center min-h-full text-center md:px-2 lg:px-4">
+                <div class="mini-panel mini-panel-bottom">
+                  <div style="margin: 0 auto;" class="flex">
+                    <div style="width: 258px; height:80px;" class="flex">
+                      <div style="text-align: start;">
+                        <h1>Pressure</h1>
+                        <h1>Today's Pressure</h1>
+                        <h1>720 hpa</h1>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="mini-panel mini-panel-bottom">
+                  <div style="margin: 0 auto;" class="flex">
+                    <div style="width: 258px; height:80px;" class="flex">
+                      <div style="text-align:start">
+                        <h1>UV Index</h1>
+                        <h1>Today's UV Index</h1>
+                        <h1>2</h1>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Secondary column (hidden on smaller screens) -->
+    <aside class="hidden w-96 border-l border-gray-200 overflow-y-auto lg:block">
+      <div style="padding: 20px; padding-top:0px;">
+
+
+        <div style="padding:12px;">
+          <div style="margin: 20px 0; margin-top:30px">
+            <h1>Today</h1>
+          </div>
+          <ul class="flex justify-between" style="font-size:12px;">
+            <li class="mini-weather">
+              <div style="text-align:center; margin-bottom:8px;">lol</div>
+              <img style="height:15px; width:15px;" src="./resources/Images/images-removebg-preview.png">
+              <div style="text-align:center;">24</div>
+            </li>
+            <li class="mini-weather">
+              <div style="text-align:center; margin-bottom:8px;">lol</div>
+              <img style="height:15px; width:15px;" src="./resources/Images/images-removebg-preview.png">
+              <div style="text-align:center;">24</div>
+            </li>
+            <li class="mini-weather">
+              <div style="text-align:center; margin-bottom:8px;">lol</div>
+              <img style="height:15px; width:15px; margin-bottom:8px;"
+                src="./resources/Images/images-removebg-preview.png">
+              <div style="text-align:center;">24</div>
+            </li>
+            <li class="mini-weather">
+              <div style="text-align:center;">lol</div>
+              <img style="height:15px; width:15px;" src="./resources/Images/images-removebg-preview.png">
+              <div style="text-align:center;">24</div>
+            </li>
+          </ul>
+          <ul style="margin-top: 40px;">
+            <li class="mini-other-weather">
+              <div class="flex justify-between">
+                <div>
+                  <h1>
+                    Tomorrow
+                  </h1>
+                  <h1>
+                    Date
+                  </h1>
+                </div>
+                <div>
+                  <h1>
+                    LOL
+                  </h1>
+                </div>
+                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+              </div>
+            </li>
+            <li class="mini-other-weather">
+              <div class="flex justify-between">
+                <div>
+                  <h1>
+                    Tomorrow
+                  </h1>
+                  <h1>
+                    Date
+                  </h1>
+                </div>
+                <div>
+                  <h1>
+                    LOL
+                  </h1>
+                </div>
+                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+              </div>
+            </li>
+            <li class="mini-other-weather">
+              <div class="flex justify-between">
+                <div>
+                  <h1>
+                    Tomorrow
+                  </h1>
+                  <h1>
+                    Date
+                  </h1>
+                </div>
+                <div>
+                  <h1>
+                    LOL
+                  </h1>
+                </div>
+                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+              </div>
+            </li>
+            <li class="mini-other-weather">
+              <div class="flex justify-between">
+                <div>
+                  <h1>
+                    Tomorrow
+                  </h1>
+                  <h1>
+                    Date
+                  </h1>
+                </div>
+                <div>
+                  <h1>
+                    LOL
+                  </h1>
+                </div>
+                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+              </div>
+            </li>
+            <li class="mini-other-weather">
+              <div class="flex justify-between">
+                <div>
+                  <h1>
+                    Tomorrow
+                  </h1>
+                  <h1>
+                    Date
+                  </h1>
+                </div>
+                <div>
+                  <h1>
+                    LOL
+                  </h1>
+                </div>
+                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+              </div>
+            </li>
+            <li class="mini-other-weather">
+              <div class="flex justify-between">
+                <div>
+                  <h1>
+                    Tomorrow
+                  </h1>
+                  <h1>
+                    Date
+                  </h1>
+                </div>
+                <div>
+                  <h1>
+                    LOL
+                  </h1>
+                </div>
+                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+  </div>
   </div>
 
 
