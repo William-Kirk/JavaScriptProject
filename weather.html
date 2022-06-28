@@ -89,12 +89,6 @@
 
   <!-- Main content -->
   <div class="flex-1 flex items-stretch overflow-hidden">
-    <aside class="hidden w-96 border-r border-gray-200 overflow-y-auto lg:block">
-      <div style="padding: 20px; padding-top:0px;">
-        <div>Gotta come up with something to put on this side</div>
-      </div>
-    </aside>
-
     <main class="flex-1 overflow-y-auto">
       <!-- Primary column -->
       <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col lg:order-last">
@@ -111,24 +105,24 @@
                           <div style="margin-left:10px;" class="flex">
                             <img style="margin-top:5px;width:20px; height:20px;"
                               src="./resources/Images/images-removebg-preview.png" alt="">
-                            <h1 style="padding-bottom:10px;margin-right: 50px; font-size: 20px; color:rgb(53, 94, 140)">
+                            <h1 id="city-state"style="padding-bottom:10px;margin-right: 50px; font-size: 20px; color:rgb(53, 94, 140)">
                               Carrollton</h1>
                           </div>
-                          <h1 style="margin-right:25px;margin-top:9px;font-size: 11px; color:rgb(52, 88, 130);">
+                          <h1 id="time-date"style="margin-right:25px;margin-top:9px;font-size: 11px; color:rgb(52, 88, 130);">
                             Today 2:31PM</h1>
                         </div>
                         <div style="text-align: center;">
-                          <h1
+                          <h1 id="big-temp"
                             style="margin-top:30px;margin-bottom:20px; font-size:70px; color:rgb(59, 92, 130); line-height:55px;">
                             85</h1>
                         </div>
                         <div style="font-size:14px;text-align: center;">
-                          <h1>Mostly Clear</h1>
+                          <h1 id="cloud-information">Mostly Clear</h1>
                         </div>
                         <div style="margin-top:40px;" class="flex justify-between">
-                          <h1 style="margin-left: 35px;">720hpa</h1>
-                          <h1>32%</h1>
-                          <h1 style="margin-right:35px;">12km/h</h1>
+                          <h1 id='pressure'style="margin-left: 35px;">720hpa</h1>
+                          <h1 id="rain-chance">32%</h1>
+                          <h1 id='wind-speed'style="margin-right:35px;">12km/h</h1>
                         </div>
                       </div>
                       <div
@@ -138,16 +132,16 @@
                         <div style="padding:30px 30px;">
                           <ul class="flex justify-between">
                             <li>
-                              <div class="temp-col"></div>
+                              <div id = 'morning-col'class="temp-col"></div>
                             </li>
                             <li>
-                              <div class="temp-col"></div>
+                              <div id = 'afternoon-col'class="temp-col"></div>
                             </li>
                             <li>
-                              <div class="temp-col"></div>
+                              <div id="evening-col" class="temp-col"></div>
                             </li>
                             <li>
-                              <div class="temp-col"></div>
+                              <div id='night-col'class="temp-col"></div>
                             </li>
                           </ul>
                           <ul style="font-size: 11px;" class="flex justify-between">
@@ -157,10 +151,10 @@
                             <li>Night</li>
                           </ul>
                           <ul style="font-size: 11px;" class="flex justify-between">
-                            <li>90</li>
-                            <li>101</li>
-                            <li>96</li>
-                            <li>90</li>
+                            <li id="morning">90</li>
+                            <li id="afternoon">101</li>
+                            <li id="evening">96</li>
+                            <li id="night">90</li>
                           </ul>
                         </div>
                       </div>
