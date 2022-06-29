@@ -6,7 +6,7 @@
   <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
   <link href="./resources/css/index.css" type="" rel="stylesheet" />
 
-  <title>an interesting title</title>
+  <title>William's Project - Weather Dashboard</title>
 </head class='h-full bg-white'>
 
 <body class="h-full" style="color:rgb(66, 95, 126); ">
@@ -28,11 +28,17 @@
             <div class="flex justify-between">
               <div>
                 <div style="margin-top:13px;">
-                  <input type="text" id="zip-code"
+                  <input style='border-top-right-radius: 0; border-bottom-right-radius: 0;'type="text" id="zip-code"
                     class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                    placeholder="zip">
+                    placeholder="Enter Zip">
                 </div>
               </div>
+              <div>
+                <button id='zip-search-bar'style ='border-width: 1px; border-left-width: 0; padding-top:4px;margin-top:13px;width:75px; height:38px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;'class="flex justify-center">
+                  Search
+                </buttonv>
+              </div>
+              <img id='loading-img'style="display:none;margin-top:15px;margin-left:10px;height:32px; width:32px;" src="./resources/Images/loading.gif">
   
   
               <div class="relative flex justify-between h-16" style="margin-right:32px;">
@@ -291,14 +297,14 @@
                     85
                   </h1>
                 </div>
-                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                <img id='day-1-img'src="./resources/Images/icons/sun.png" style="width: 55px;
                 height: 55px;">
               </div>
             </li>
             <li class="mini-other-weather">
               <div class="flex justify-between">
                 <div>
-                  <h1 style="margin-bottom:10px;font-weight:600;">
+                  <h1 id='day-2-week'style="margin-bottom:10px;font-weight:600;">
                     Tomorrow
                   </h1>
                   <h1 id='day-2-date'style="color:rgb(129, 147, 157)">
@@ -312,14 +318,14 @@
                     85
                   </h1>
                 </div>
-                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                <img id='day-2-img'src="./resources/Images/icons/sun.png" style="width: 55px;
                 height: 55px;">
               </div>
             </li>
             <li class="mini-other-weather">
               <div class="flex justify-between">
                 <div>
-                  <h1 style="margin-bottom:10px;font-weight:600;">
+                  <h1 id = 'day-3-week'style="margin-bottom:10px;font-weight:600;">
                     Tomorrow
                   </h1>
                   <h1 id='day-3-date'style="color:rgb(129, 147, 157)">
@@ -333,14 +339,14 @@
                     85
                   </h1>
                 </div>
-                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                <img id='day-3-img'src="./resources/Images/icons/sun.png" style="width: 55px;
                 height: 55px;">
               </div>
             </li>
             <li class="mini-other-weather">
               <div class="flex justify-between">
                 <div>
-                  <h1 style="margin-bottom:10px;font-weight:600;">
+                  <h1 id='day-4-week'style="margin-bottom:10px;font-weight:600;">
                     Tomorrow
                   </h1>
                   <h1 id='day-4-date'style="color:rgb(129, 147, 157)">
@@ -354,7 +360,7 @@
                     85
                   </h1>
                 </div>
-                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                <img id='day-4-img'src="./resources/Images/icons/sun.png" style="width: 55px;
                 height: 55px;">
               </div>
             </li>

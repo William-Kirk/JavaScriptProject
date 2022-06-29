@@ -5,7 +5,7 @@
     <link href="./resources/dist/output.css" type="text/css" rel="stylesheet" />
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
 
-    <title>an interesting title</title>
+    <title>William's Project - Tip Calculator</title>
 </head>
 
 <body>
@@ -122,7 +122,7 @@
                         class="inline-flex px-3 rounded-l-md border border-r-1 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
                         Tip
                     </span>
-                    <span id="my-man"style="padding: 11px;"
+                    <span id="my-man" style="padding: 11px;"
                         class="inline-flex px-3 border border-r-0 border-l-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
                         <input type="range" min="0" max="100" value="50" class="slider" id="myRange"
                             oninput="setPrices()" onchange="setPrices()">
@@ -153,7 +153,7 @@
                         </span>
                         <span id="tip"
                             class="fatter-height flex-1 inline-flex items-center px-3 rounded-r-md border border-r-1 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                            lol
+                            0.00
                         </span>
                     </div>
                     <div style="margin:5px auto; width: 400px;"
@@ -164,7 +164,7 @@
                         </span>
                         <span id="total-w-tip"
                             class="fatter-height flex-1 inline-flex items-center px-3 rounded-r-md border border-r-1 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                            lol
+                            0.00
                         </span>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                     document.getElementById("error-message").innerHTML = null;
                     if (isNaN(value)) {
                         document.getElementById("price").value = null;
-                        document.getElementById("error-message").innerHTML = "Please Enter a Real Number"; 
+                        document.getElementById("error-message").innerHTML = "Please Enter a Real Number";
                     }
 
                     document.getElementById("tip").innerHTML = tipAmount;
@@ -196,15 +196,15 @@
                 }
 
                 const costInput = document.querySelector('#price');
-                const sliderInput = document.querySelector('#myRange'); 
+                const sliderInput = document.querySelector('#myRange');
                 const visualInput = document.querySelector('#visualize-slider');
 
                 costInput.addEventListener('input', setPrices);
-                sliderInput.addEventListener('input', function(){
+                sliderInput.addEventListener('input', function () {
                     document.getElementById("visualize-slider").value = document.getElementById("myRange").value;
                     setPrices();
                 });
-                visualInput.addEventListener('input', function(){
+                visualInput.addEventListener('input', function () {
                     document.getElementById("myRange").value = document.getElementById("visualize-slider").value;
                     setPrices();
                 });

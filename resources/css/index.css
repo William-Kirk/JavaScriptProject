@@ -268,3 +268,7 @@ input:focus{
     margin-top: -100px; /* Negative half of height. */
     margin-left: -250px; /* Negative half of width. */
 }
+
+#zip-search-bar:hover{
+    background-color: rgb(216, 230, 237);
+}
