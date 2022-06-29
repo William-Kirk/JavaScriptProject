@@ -9,7 +9,7 @@
   <title>an interesting title</title>
 </head class='h-full bg-white'>
 
-<body class="h-full">
+<body class="h-full" style="color:rgb(66, 95, 126); ">
 
   <div>
     <header>
@@ -18,8 +18,8 @@
         <div class="mx-auto">
           <!--figure out a way to set the minimum width to something that makes sense-->
           <div class="flex justify-between">
-              <div class="flex justify-center" style="border-color: rgb(229 231 235); border-right-width: 1px;">
-                <div class="text-2xl font-bold text-gray-700 flex justify-center" style="margin-top:15px; width:384px;">
+              <div class="flex">
+                <div class="text-2xl font-bold text-gray-700 flex justify-center" style="margin-left:32px;margin-top:15px;">
                   <h1>
                     William's Project
                   </h1>
@@ -27,10 +27,10 @@
             </div>
             <div class="flex justify-between">
               <div>
-                <div style="margin-top:13px; margin-right:300px;">
-                  <input type="email" name="email" id="email"
+                <div style="margin-top:13px;">
+                  <input type="text" id="zip-code"
                     class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                    placeholder="75000">
+                    placeholder="zip">
                 </div>
               </div>
   
@@ -40,7 +40,7 @@
                   <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                     <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                     <a href="./index.html"
-                      class="border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                      class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                       Tip Calculator
                     </a>
                     <a href="./grocery.html"
@@ -52,7 +52,7 @@
                       Rock, Paper, Scissors
                     </a>
                     <a href="./weather.html"
-                      class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                      class="border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                       Weather Dashboard
                     </a>
                   </div>
@@ -69,7 +69,7 @@
           <div class="pt-2 pb-4 space-y-1">
             <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
             <a href="./index.html"
-              class="bg-indigo-50 border-indigo-900 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Tip
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Tip
               Calculator</a>
             <a href="./grocery.html"
               class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Grocery
@@ -78,7 +78,7 @@
               class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Rock,
               Paper, Scissors</a>
             <a href="./weather.html"
-              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Weather
+              class="bg-indigo-50 border-indigo-900 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Weather
               Dashboard</a>
           </div>
         </div>
@@ -89,7 +89,7 @@
 
   <!-- Main content -->
   <div class="flex-1 flex items-stretch overflow-hidden">
-    <main class="flex-1 overflow-y-auto">
+    <main class=" flex-1 overflow-y-auto">
       <!-- Primary column -->
       <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col lg:order-last">
         <div>
@@ -103,8 +103,6 @@
                       <div style="width: 300px; height:240px;" class="">
                         <div class="flex justify-between">
                           <div style="margin-left:10px;" class="flex">
-                            <img style="margin-top:5px;width:20px; height:20px;"
-                              src="./resources/Images/images-removebg-preview.png" alt="">
                             <h1 id="city-state"style="padding-bottom:10px;margin-right: 50px; font-size: 20px; color:rgb(53, 94, 140)">
                               Carrollton</h1>
                           </div>
@@ -113,16 +111,25 @@
                         </div>
                         <div style="text-align: center;">
                           <h1 id="big-temp"
-                            style="margin-top:30px;margin-bottom:20px; font-size:70px; color:rgb(59, 92, 130); line-height:55px;">
+                            style="margin-left:30px;margin-top:30px;margin-bottom:20px; font-size:70px; color:rgb(59, 92, 130); line-height:55px;">
                             85</h1>
                         </div>
                         <div style="font-size:14px;text-align: center;">
                           <h1 id="cloud-information">Mostly Clear</h1>
                         </div>
                         <div style="margin-top:40px;" class="flex justify-between">
-                          <h1 id='pressure'style="margin-left: 35px;">720hpa</h1>
-                          <h1 id="rain-chance">32%</h1>
-                          <h1 id='wind-speed'style="margin-right:35px;">12km/h</h1>
+                          <div>
+                            <h1 id='pressure'style="margin-left: 35px;">720hpa</h1>
+                            <h1 style="color:rgb(126, 141, 148);font-size:small;margin-left:35px;">Pressure</h1>
+                          </div>
+                          <div>
+                            <h1 id="rain-chance">32%</h1>
+                            <h1 style="color:rgb(119, 133, 140); font-size:small">Humidity</h1>
+                          </div>
+                          <div>
+                            <h1 id='wind-speed'style="margin-right:35px;">12km/h</h1>
+                            <h1 style="color:rgb(113, 128, 135); font-size:small;margin-right:35px;">Wind Speed</h1>
+                          </div>
                         </div>
                       </div>
                       <div
@@ -170,11 +177,14 @@
                   <div style="margin: 0 auto;" class="flex">
                     <div style="width: 258px; height:80px;" class="flex">
                       <div style="text-align: start;">
-                        <h1>Wind</h1>
-                        <h1>Today's Wind Speed</h1>
-                        <h1>12km/h</h1>
+                        <div class="flex justify-between">
+                          <div>
+                            <h1 style="font-weight: bold;">Wind</h1>
+                            <h1 style="font-size:13px;">Today's Wind Speed</h1>
+                            <h1 id="big-wind-speed">12km/h</h1>
+                          </div>
+                        </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -182,9 +192,9 @@
                   <div style="margin: 0 auto;" class="flex">
                     <div style="width: 258px; height:80px;" class="flex">
                       <div style="text-align:start">
-                        <h1>Chance of Rain</h1>
-                        <h1>Today's Rain Chance</h1>
-                        <h1>15%</h1>
+                        <h1 style="font-weight:bold;">Humidity</h1>
+                        <h1 style="font-size:13px;">Today's Humidity</h1>
+                        <h1 id="big-humidity">15%</h1>
                       </div>
 
                     </div>
@@ -198,9 +208,9 @@
                   <div style="margin: 0 auto;" class="flex">
                     <div style="width: 258px; height:80px;" class="flex">
                       <div style="text-align: start;">
-                        <h1>Pressure</h1>
-                        <h1>Today's Pressure</h1>
-                        <h1>720 hpa</h1>
+                        <h1 style="font-weight:bold;">Chance of Rain</h1>
+                        <h1 style="font-size:13px;">Today's Rain Chance</h1>
+                        <h1 id="big-rain-chance">20%</h1>
                       </div>
 
                     </div>
@@ -210,11 +220,10 @@
                   <div style="margin: 0 auto;" class="flex">
                     <div style="width: 258px; height:80px;" class="flex">
                       <div style="text-align:start">
-                        <h1>UV Index</h1>
-                        <h1>Today's UV Index</h1>
-                        <h1>2</h1>
+                        <h1 style="font-weight:bold;">UV Index</h1>
+                        <h1 style="font-size:13px;">Today's UV Index</h1>
+                        <h1 id="big-uv">2</h1>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -226,144 +235,127 @@
     </main>
 
     <!-- Secondary column (hidden on smaller screens) -->
-    <aside class="hidden w-96 border-l border-gray-200 overflow-y-auto lg:block">
+    <aside style="width:35rem;"class="myThing md:ml-6 hidden w-96 border-l border-gray-200 overflow-y-auto lg:block">
       <div style="padding: 20px; padding-top:0px;">
 
 
         <div style="padding:12px;">
-          <div style="margin: 20px 0; margin-top:30px">
+          <div style="margin: 20px 0;">
             <h1>Today</h1>
           </div>
           <ul class="flex justify-between" style="font-size:12px;">
-            <li class="mini-weather">
-              <div style="text-align:center; margin-bottom:8px;">lol</div>
-              <img style="height:15px; width:15px;" src="./resources/Images/images-removebg-preview.png">
-              <div style="text-align:center;">24</div>
+            <li style="background-color:rgb(208, 236, 255);"class="mini-weather">
+              <div style="text-align:center; margin-bottom:8px;">Now</div>
+              <img id='now-img'style="height:35px; width:35px; " src="./resources/Images/icons/sun.png">
+              <div id='now-content'style="text-align:center;
+              font-size: 15px;
+              font-weight: 600;">24</div>
             </li>
             <li class="mini-weather">
-              <div style="text-align:center; margin-bottom:8px;">lol</div>
-              <img style="height:15px; width:15px;" src="./resources/Images/images-removebg-preview.png">
-              <div style="text-align:center;">24</div>
+              <div id='one-hour'style="text-align:center; margin-bottom:8px;">lol</div>
+              <img id='one-hour-img'style="height:35px; width:35px;" src="./resources/Images/icons/sun.png">
+              <div id="one-hour-content" style="text-align:center;
+              font-size: 15px;
+              font-weight: 600;">24</div>
             </li>
             <li class="mini-weather">
-              <div style="text-align:center; margin-bottom:8px;">lol</div>
-              <img style="height:15px; width:15px; margin-bottom:8px;"
-                src="./resources/Images/images-removebg-preview.png">
-              <div style="text-align:center;">24</div>
+              <div id='two-hour'style="text-align:center; margin-bottom:8px;">lol</div>
+              <img id='two-hour-img'style="height:35px; width:35px;" src="./resources/Images/icons/sun.png">
+              <div id='two-hour-content'style="text-align:center;
+              font-size: 15px;
+              font-weight: 600;">24</div>
             </li>
             <li class="mini-weather">
-              <div style="text-align:center;">lol</div>
-              <img style="height:15px; width:15px;" src="./resources/Images/images-removebg-preview.png">
-              <div style="text-align:center;">24</div>
+              <div id='three-hour'style="text-align:center; margin-bottom:8px;">lol</div>
+              <img id='three-hour-img'style="height:35px; width:35px;" src="./resources/Images/icons/sun.png">
+              <div id='three-hour-content'style="text-align:center;
+              font-size: 15px;
+              font-weight: 600;">24</div>
             </li>
           </ul>
           <ul style="margin-top: 40px;">
             <li class="mini-other-weather">
               <div class="flex justify-between">
                 <div>
-                  <h1>
+                  <h1 style="margin-bottom:10px;font-weight:600;">
                     Tomorrow
                   </h1>
-                  <h1>
+                  <h1 id="day-1-date" style="color:rgb(129, 147, 157)">
                     Date
                   </h1>
                 </div>
                 <div>
-                  <h1>
-                    LOL
+                  <h1 id='day-1'style="font-size: 25px;
+                  margin-top: 10px;
+                  font-weight: 600;">
+                    85
                   </h1>
                 </div>
-                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                height: 55px;">
               </div>
             </li>
             <li class="mini-other-weather">
               <div class="flex justify-between">
                 <div>
-                  <h1>
+                  <h1 style="margin-bottom:10px;font-weight:600;">
                     Tomorrow
                   </h1>
-                  <h1>
+                  <h1 id='day-2-date'style="color:rgb(129, 147, 157)">
                     Date
                   </h1>
                 </div>
                 <div>
-                  <h1>
-                    LOL
+                  <h1 id="day-2" style="font-size: 25px;
+                  margin-top: 10px;
+                  font-weight: 600;">
+                    85
                   </h1>
                 </div>
-                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                height: 55px;">
               </div>
             </li>
             <li class="mini-other-weather">
               <div class="flex justify-between">
                 <div>
-                  <h1>
+                  <h1 style="margin-bottom:10px;font-weight:600;">
                     Tomorrow
                   </h1>
-                  <h1>
+                  <h1 id='day-3-date'style="color:rgb(129, 147, 157)">
                     Date
                   </h1>
                 </div>
                 <div>
-                  <h1>
-                    LOL
+                  <h1 id='day-3'style="font-size: 25px;
+                  margin-top: 10px;
+                  font-weight: 600;">
+                    85
                   </h1>
                 </div>
-                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                height: 55px;">
               </div>
             </li>
             <li class="mini-other-weather">
               <div class="flex justify-between">
                 <div>
-                  <h1>
+                  <h1 style="margin-bottom:10px;font-weight:600;">
                     Tomorrow
                   </h1>
-                  <h1>
+                  <h1 id='day-4-date'style="color:rgb(129, 147, 157)">
                     Date
                   </h1>
                 </div>
                 <div>
-                  <h1>
-                    LOL
+                  <h1 id="day-4" style="font-size: 25px;
+                  margin-top: 10px;
+                  font-weight: 600;">
+                    85
                   </h1>
                 </div>
-                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-              </div>
-            </li>
-            <li class="mini-other-weather">
-              <div class="flex justify-between">
-                <div>
-                  <h1>
-                    Tomorrow
-                  </h1>
-                  <h1>
-                    Date
-                  </h1>
-                </div>
-                <div>
-                  <h1>
-                    LOL
-                  </h1>
-                </div>
-                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
-              </div>
-            </li>
-            <li class="mini-other-weather">
-              <div class="flex justify-between">
-                <div>
-                  <h1>
-                    Tomorrow
-                  </h1>
-                  <h1>
-                    Date
-                  </h1>
-                </div>
-                <div>
-                  <h1>
-                    LOL
-                  </h1>
-                </div>
-                <img src="./resources/Images/images-removebg-preview.png" style="width:20px; height:20px;">
+                <img src="./resources/Images/icons/sun.png" style="width: 55px;
+                height: 55px;">
               </div>
             </li>
           </ul>

@@ -226,7 +226,11 @@ input:focus{
 }
 
 .mini-weather{
-    padding:12px 25px; border-radius:10px; background-color: rgb(217, 227, 233);
+    padding:10px 20px; border-radius:10px;
+}
+
+.mini-weather:hover{
+    background-color:rgb(237, 248, 255);
 }
 
 .mini-weather-child{
@@ -235,10 +239,10 @@ input:focus{
 
 .mini-other-weather{
     border-radius:10px;
-    background-color:rgb(226, 231, 235);
     padding: 10px;
-    padding-left:0px;
+    padding-left:5px;
     margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .option-button{
