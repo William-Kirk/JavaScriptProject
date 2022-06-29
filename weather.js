@@ -56,6 +56,7 @@ function main() {
 }
 
 function start(){
+    document.getElementById('zip-code').value = 75082
     activate();
     document.addEventListener('keyup', function(event){
         if(event.code === 'Enter')

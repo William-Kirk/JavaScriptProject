@@ -155,6 +155,7 @@
 
     function addItemToGroceryList(){
       var groceryName = document.getElementById('grocery-input').value;
+      document.getElementById('grocery-input').value = null;
       document.getElementById('err-msg').innerText = null;
       //err.innerText = null;
       if(groceryName){

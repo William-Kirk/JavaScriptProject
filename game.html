@@ -112,20 +112,19 @@
             class="">Rock Paper Scissors</h1>
           <hr>
           <div style="margin-top:8px;" class="flex justify-center">
-            <div style="margin: 0 10px;">
+            <div style="font-size: small;margin: 0 10px;">
               <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
-                <p>Oh no! Bad guys! They terrorize the town with their epic rock paper scissor skills! You're going to
-                  need to beat them at their own game!</p>
+                <p>The Rock Paper Scissor champions, masters of concealing their intentions and reading yours. You're here to challenge them.</p>
               </div>
             </div>
-            <div style="margin: 0 8px;">
+            <div style="font-size:small;margin: 0 8px;">
               <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
-                <p>Heres the instructions on how to play, but I havent come up with those yet, so good luck!</p>
+                <p>The game is simple. Rock beats scissors, paper beats rock, scissors beat paper. In this game, you and your opponent have 3 hearts of health. When one of you loses a turn, a heart is taken. Get the enemy down to 0 hearts to win.</p>
               </div>
             </div>
-            <div style="margin: 0 8px;">
+            <div style="font-size:small;margin: 0 8px;">
               <div class="mini-text-box inline-flex border border-gray-300 rounded-md bg-gray-50 text-l text-gray-500 ">
-                <p>Good luck defeating all eight of the master rock paper scissor fighters!</p>
+                <p>Good luck defeating all six of the master rock paper scissor champions! Each champion has their own biases that affect their choices. Try to recognize their patterns and beat them with wits.</p>
               </div>
             </div>
           </div>
@@ -140,10 +139,8 @@
     </div>
     <div class="flex justify-center">
       <div id="character-selector">
-        <div
-          style="margin: 25px auto; margin-bottom: 0px; width: 700px;font-size: xx-large; font-weight:bold; background-color:white; border-color:rgb(186, 196, 204); border-radius: 15px; border-width: 3px;"
-          class="flex justify-center">
-          <div>CHOOSE YOUR OPPONENT</div>
+        <div style="margin: 25px auto; margin-bottom: 0px; width: 700px;font-size: xx-large; font-weight:bold; background-color:white; border-color:rgb(186, 196, 204); border-radius: 15px; border-width: 3px;" class="flex justify-center">
+          <div><div>CHOOSE YOUR OPPONENT</div><div style="font-size:small; text-align:center;">Characters drawn by my friend Grace!</div></div>
         </div>
         <div class="characters">
           <div class="flex justify-center">
@@ -151,14 +148,14 @@
               <div class="character-fighter">
                 <img class="character-fighter-img" style="display:block"
                   src="./resources/images/characters/ChooseYourFighter_1.PNG">
-                <h1 class="character-fighter-txt">Lol Enemy 1</h1>
+                <h1 class="character-fighter-txt">The Crusher</h1>
               </div>
             </button>
             <button id="character-1">
               <div class="character-fighter">
-                <img class="character-fighter-img" style="display:block"
+                <img class="character-fighter-img" style="display:block "
                   src="./resources/images/characters/ChooseYourFighter_2.PNG">
-                <h1 class="character-fighter-txt">Lol Enemy 2</h1>
+                <h1 class="character-fighter-txt">The r i p p e r</h1>
               </div>
 
             </button>
@@ -166,7 +163,7 @@
               <div class="character-fighter">
                 <img class="character-fighter-img" style="display:block"
                   src="./resources/images/characters/ChooseYourFighter_3.PNG">
-                <h1 class="character-fighter-txt">Lol Enemy 3</h1>
+                <h1 class="character-fighter-txt">THE STURDY</h1>
               </div>
             </button>
           </div>
@@ -175,21 +172,21 @@
               <div class="character-fighter">
                 <img class="character-fighter-img" style="display:block"
                   src="./resources/images/characters/ChooseYourFighter_4.PNG">
-                <h1 class="character-fighter-txt">Lol Enemy 4</h1>
+                <h1 class="character-fighter-txt">the slippery</h1>
               </div>
             </button>
             <button id="character-4">
               <div class="character-fighter">
                 <img class="character-fighter-img" style="display:block"
                   src="./resources/images/characters/ChooseYourFighter_5.jpeg">
-                <h1 class="character-fighter-txt">Lol Enemy</h1>
+                <h1 class="character-fighter-txt">The SMaShEr</h1>
               </div>
             </button>
             <button id="character-5">
               <div class="character-fighter">
                 <img class="character-fighter-img" style="display:block"
                   src="./resources/images/characters/ChooseYourFighter_6.PNG">
-                <h1 class="character-fighter-txt">Lol Enemy</h1>
+                <h1 class="character-fighter-txt">Doug lol</h1>
               </div>
             </button>
           </div>
@@ -302,7 +299,7 @@
     //x = rock, y = paper, z = scissors
 
 
-    var characterInfo = [{ name: "First Guy :D", x: 100, y: 0, z: 0 }, { name: "Second Guy", x: 50, y: 50, z: 0 }, { name: "Third Guy", x: 25, y: 50, z: 25 }, { name: "Fourth Guy", x: 10, y: 0, z: 0 }, { name: "Fifth Guy", x: 10, y: 33, z: 45 }, { name: "Sixth Guy", x: 0, y: 10, z: 10 }];
+    var characterInfo = [{ name: "The Crusher", x: 84, y: 8, z: 8 }, { name: "The Flipper", x: 45, y: 45, z: 10 }, { name: "The Sturdy", x: 25, y: 50, z: 25 }, { name: "The Slippery", x: 10, y: 40, z: 50 }, { name: "The Smasher", x: 10, y: 33, z: 45 }, { name: "Doug lol", x: 0, y: 10, z: 10 }];
     var popup = document.getElementById('pop-up');
     popup.style.display = 'none';
 
