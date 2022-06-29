@@ -258,7 +258,7 @@ function getWeatherInfo() {
         }
         var link = '';
         if (lat != "")
-            link = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + long + "&appid=f9365e105ac4d399424f1b7351a3c941&units=imperial";
+            link = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + long + "&appid=f9365e105ac4d399424f1b7351a3c941&units=imperial";
         console.log(link);
         request.open("GET", link);
         request.send();
@@ -374,7 +374,7 @@ function currentWeatherUV() {
         }
         var link = '';
         if (lat != "")
-            link = "http://api.weatherapi.com/v1/current.json?key=1ccd5ca6ef0646bf9ab05148222906&q="+lat+','+long+"&aqi=no";
+            link = "https://api.weatherapi.com/v1/current.json?key=1ccd5ca6ef0646bf9ab05148222906&q="+lat+','+long+"&aqi=no";
         console.log(link);
         request.open("GET", link);
         request.send();
@@ -397,7 +397,7 @@ function cmonFuture() {
         }
         var link = '';
         if (lat != "")
-            link = "http://api.weatherapi.com/v1/forecast.json?key=1ccd5ca6ef0646bf9ab05148222906&q="+lat+','+long+"&days=8&aqi=no&alerts=no";
+            link = "https://api.weatherapi.com/v1/forecast.json?key=1ccd5ca6ef0646bf9ab05148222906&q="+lat+','+long+"&days=8&aqi=no&alerts=no";
         console.log(link);
         request.open("GET", link);
         request.send();
