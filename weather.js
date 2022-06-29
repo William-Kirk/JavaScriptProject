@@ -132,8 +132,9 @@ function setBottomSidePageInfo(){
 function quickWeek(addDays){
     currentDay = new Date().getDay();
     currentDay += addDays;
-    if(currentDay > 7)
-        currentDay-7;
+    if(currentDay > 6){
+        currentDay-=7;
+    }
 
     if(currentDay == 0)
         return 'Sunday';
