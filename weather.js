@@ -96,9 +96,9 @@ function setBottomSidePageInfo(){
     document.getElementById('day-3').innerHTML = Math.round(futureDay2) + '°';
     document.getElementById('day-4').innerHTML = Math.round(futureDay3) + '°';
 
-    document.getElementById('day-2-week').innerHTML = quickWeek(1);
-    document.getElementById('day-3-week').innerHTML = quickWeek(2);
-    document.getElementById('day-4-week').innerHTML = quickWeek(3);
+    document.getElementById('day-2-week').innerHTML = quickWeek(2);
+    document.getElementById('day-3-week').innerHTML = quickWeek(3);
+    document.getElementById('day-4-week').innerHTML = quickWeek(4);
 
     document.getElementById('day-1-date').innerHTML = quickDate(1);
     document.getElementById('day-2-date').innerHTML = quickDate(2);
